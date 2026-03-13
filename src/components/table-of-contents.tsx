@@ -18,13 +18,15 @@ export function TableOfContents({ items }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>("")
 
   useEffect(() => {
+    if (items.length === 0) return
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id)
-          }
-        })
+        // Find the first intersecting entry
+        const visible = entries.find((e) => e.isIntersecting)
+        if (visible) {
+          setActiveId(visible.target.id)
+        }
       },
       { rootMargin: "-100px 0px -66%" }
     )
@@ -42,7 +44,10 @@ export function TableOfContents({ items }: TableOfContentsProps) {
   const handleClick = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      // Get the element's position and scroll with offset for sticky header (56px + 24px padding)
+      const top = element.getBoundingClientRect().top + window.scrollY - 80
+      window.scrollTo({ top, behavior: "smooth" })
+      setActiveId(id)
     }
   }
 
@@ -51,24 +56,24 @@ export function TableOfContents({ items }: TableOfContentsProps) {
   }
 
   return (
-    <aside className="hidden xl:block w-48 sticky top-20 max-h-[calc(100vh-80px)] overflow-y-auto">
-      <div className="px-4 py-6 space-y-4">
+    <aside className="hidden xl:block w-48 shrink-0">
+      <div className="sticky top-20 max-h-[calc(100vh-80px)] overflow-y-auto px-4 py-6 space-y-4">
         <h3 className="font-semibold text-sm text-foreground">Contents</h3>
-        <nav className="space-y-2 text-sm">
+        <nav className="space-y-1 text-sm">
           {items.map((item) => {
             const isActive = activeId === item.id
             const isLevel3 = item.level === 3
 
             return (
-              <motion.button
+              <button
                 key={item.id}
                 onClick={() => handleClick(item.id)}
                 className={cn(
-                  "block text-left w-full rounded-md px-3 py-1.5 transition-all relative",
-                  isLevel3 && "ml-4",
+                  "block text-left w-full rounded-md px-3 py-1.5 transition-colors relative text-[13px] leading-snug",
+                  isLevel3 && "ml-3",
                   isActive
-                    ? "text-primary font-medium bg-primary/5"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                    ? "text-primary font-medium"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {isActive && (
@@ -79,7 +84,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
                   />
                 )}
                 <span className="block pl-1">{item.title}</span>
-              </motion.button>
+              </button>
             )
           })}
         </nav>
