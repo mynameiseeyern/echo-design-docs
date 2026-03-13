@@ -1364,6 +1364,24 @@ return (
           />
         </ContentSection>
 
+        <ContentSection id="chart-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Charts visualize trends and comparisons in Echo analytics. They display adherence trends over time, queue performance metrics, and agent comparison data, enabling leadership to identify patterns and performance insights at a glance.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Adherence Trend Lines</p>
+                <p className="text-sm text-muted-foreground">Line charts showing adherence percentage changes over days/weeks for individual agents or queues</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Queue & Agent Comparison Charts</p>
+                <p className="text-sm text-muted-foreground">Bar or comparison charts for benchmarking agent performance and queue-level metrics</p>
+              </div>
+            </div>
+          </div>
+        </ContentSection>
+
         <ContentSection id="chart-accessibility" title="Accessibility">
           <div className="space-y-3 text-sm text-gray-700">
             <ul className="list-inside list-disc space-y-2">
@@ -1476,6 +1494,24 @@ return (
 
             ]}
           />
+        </ContentSection>
+
+        <ContentSection id="data-table-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Data tables are the most critical batch4 component, displaying Agent Performance Snapshots with agent names, call counts, adherence percentages, and lowest-scoring steps. They're central to compliance dashboards, providing sortable/filterable views of agent metrics and call logs.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Agent Performance Snapshot</p>
+                <p className="text-sm text-muted-foreground">Table showing agent names, calls handled, overall adherence%, and lowest-scoring SOP step for quick assessment</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Call Logs & Queue Performance</p>
+                <p className="text-sm text-muted-foreground">Sortable tables for browsing individual call records and queue-level performance metrics</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="data-table-accessibility" title="Accessibility">
@@ -1691,6 +1727,24 @@ return (
           />
         </ContentSection>
 
+        <ContentSection id="drawer-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Drawers provide mobile-friendly interfaces for detailed views and filtering. They enable viewing call details and agent profiles on small screens while maintaining access to main navigation.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Mobile Call Detail View</p>
+                <p className="text-sm text-muted-foreground">Drawer for viewing full call transcripts and compliance details on mobile devices</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Filter Panel & Agent Profile</p>
+                <p className="text-sm text-muted-foreground">Mobile-friendly drawer for filter options and detailed agent profile viewing</p>
+              </div>
+            </div>
+          </div>
+        </ContentSection>
+
         <ContentSection id="drawer-accessibility" title="Accessibility">
           <div className="space-y-3 text-sm text-gray-700">
             <ul className="list-inside list-disc space-y-2">
@@ -1773,6 +1827,24 @@ return (
 
             ]}
           />
+        </ContentSection>
+
+        <ContentSection id="empty-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Empty states communicate when no results match applied filters or when queues/agent groups are unassigned. They provide helpful guidance on next steps and prevent confusing blank screens.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">No Results States</p>
+                <p className="text-sm text-muted-foreground">Empty state for filtered call lists when no matching records exist</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Empty Queues & Agent Views</p>
+                <p className="text-sm text-muted-foreground">States for empty queue views and scenarios where no agents match selected criteria</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="empty-accessibility" title="Accessibility">
@@ -2401,6 +2473,20 @@ return (
           />
         </ContentSection>
 
+        <ContentSection id="navigation-menu-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Navigation menus form the main app structure, allowing users to access Dashboard, Queues, Agents, Reports, and Settings. They're essential for navigating between major functional areas and maintaining context.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Main Navigation</p>
+                <p className="text-sm text-muted-foreground">Primary menu with links to Dashboard, Queues, Agents, Reports, and Settings sections</p>
+              </div>
+            </div>
+          </div>
+        </ContentSection>
+
         <ContentSection id="navigation-menu-accessibility" title="Accessibility">
           <div className="space-y-3 text-sm text-gray-700">
             <ul className="list-inside list-disc space-y-2">
@@ -2521,6 +2607,24 @@ return (
 
             ]}
           />
+        </ContentSection>
+
+        <ContentSection id="pagination-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Pagination handles large datasets in call lists, agent lists, and queue results. Echo processes thousands of calls per report, requiring efficient navigation through paginated results for QA managers and compliance officers.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Call List Navigation</p>
+                <p className="text-sm text-muted-foreground">Paginate through 1,247+ calls per report period with previous/next controls and page indicators</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Agent & Queue Results</p>
+                <p className="text-sm text-muted-foreground">Navigate through large agent lists and queue performance result sets efficiently</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="pagination-accessibility" title="Accessibility">
@@ -2731,6 +2835,24 @@ return (
 
             ]}
           />
+        </ContentSection>
+
+        <ContentSection id="sidebar-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              The sidebar provides persistent primary app navigation with categorized sections for queues, agent groups, and report types. It enables quick context switching and filter selection without losing main view state.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Queue Categories & Groups</p>
+                <p className="text-sm text-muted-foreground">Sidebar sections for selecting different queue categories and agent group hierarchies</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Report Sections Navigation</p>
+                <p className="text-sm text-muted-foreground">Navigation hierarchy for compliance reports, coaching dashboards, and analytics sections</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="sidebar-accessibility" title="Accessibility">
@@ -2958,6 +3080,24 @@ return (
 
             ]}
           />
+        </ContentSection>
+
+        <ContentSection id="spinner-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Spinners indicate ongoing data processing, report generation, and real-time analysis. They provide visual feedback during heavy operations like call scoring and adherence calculations, managing user expectations.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Report Generation Loading</p>
+                <p className="text-sm text-muted-foreground">Spinner indicating multi-call analysis and adherence report compilation in progress</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Real-time Processing & Analysis</p>
+                <p className="text-sm text-muted-foreground">Loading indicators for data processing, SOP step scoring, and compliance calculations</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="spinner-accessibility" title="Accessibility">

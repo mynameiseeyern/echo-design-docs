@@ -17,32 +17,126 @@ const componentDocsMap: Record<string, DocContent> = {}
 
 componentDocsMap["introduction"] = {
   title: "Introduction",
-  description: "Welcome to the Echo Design System",
+  description: "The design system for Echo — an AI-powered Interaction Intelligence Platform for contact centres.",
   html: `
-    <div class="space-y-8">
+    <div class="space-y-10">
       <section class="space-y-4">
         <p class="text-lg text-muted-foreground">
-          Echo is a modern design system built on Tailwind CSS and shadcn/ui components. It provides a comprehensive set of beautifully designed, accessible components that can be easily customized to match your brand.
+          Echo is an AI-powered Interaction Intelligence Platform that analyses 100% of contact centre calls to detect risk, measure process adherence, and elevate agent performance. This design system provides the components, patterns, and guidelines used to build every surface of the Echo product.
         </p>
       </section>
 
       <section class="space-y-4">
-        <h2 class="text-2xl font-semibold">Features</h2>
-        <ul class="space-y-2 text-base">
-          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Built on Tailwind CSS - utility-first CSS framework</span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>shadcn/ui components - copy-paste component library</span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Accessible by default - WCAG 2.1 AA compliant</span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Customizable - extensive theming options</span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Dark mode support - built-in light and dark themes</span></li>
-          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>TypeScript first - full type safety</span></li>
-        </ul>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-2xl font-semibold">Getting Started</h2>
+        <h2 class="text-2xl font-semibold">What Echo does</h2>
         <p class="text-base text-muted-foreground">
-          Explore the documentation to learn about our design principles, foundations, and component library. Each component comes with interactive examples, code snippets, usage guidelines, and accessibility notes.
+          Contact centres typically review only 1–3% of calls manually. Echo closes that gap by automatically scoring every interaction against defined SOPs, surfacing compliance risks, identifying training gaps, and giving leaders the visibility they need to act — not guess.
         </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+          <div class="border rounded-lg p-4 bg-card text-center space-y-1">
+            <p class="text-2xl font-bold text-primary">100%</p>
+            <p class="text-xs text-muted-foreground">Call coverage</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card text-center space-y-1">
+            <p class="text-2xl font-bold text-primary">64%</p>
+            <p class="text-xs text-muted-foreground">Avg adherence</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card text-center space-y-1">
+            <p class="text-2xl font-bold text-primary">50×</p>
+            <p class="text-xs text-muted-foreground">Manual QA</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card text-center space-y-1">
+            <p class="text-2xl font-bold text-primary">&lt;30 days</p>
+            <p class="text-xs text-muted-foreground">Time to value</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Core product pillars</h2>
+        <p class="text-sm text-muted-foreground mb-2">Every component in this system supports one or more of these pillars.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border rounded-lg p-5 bg-card space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-primary"></div>
+              <h3 class="font-semibold text-sm">Dynamic Process Adherence</h3>
+            </div>
+            <p class="text-sm text-muted-foreground">Step-by-step SOP scoring across every call. Visualised with progress bars, adherence badges, and step-level breakdowns.</p>
+          </div>
+          <div class="border rounded-lg p-5 bg-card space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-primary"></div>
+              <h3 class="font-semibold text-sm">Workforce Intelligence</h3>
+            </div>
+            <p class="text-sm text-muted-foreground">Agent performance tables, coaching insights, skill gap identification. Data tables, badges, and trend charts are the primary surfaces.</p>
+          </div>
+          <div class="border rounded-lg p-5 bg-card space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-primary"></div>
+              <h3 class="font-semibold text-sm">Proactive Compliance</h3>
+            </div>
+            <p class="text-sm text-muted-foreground">Risk alerts and deviation detection before they escalate. Alerts, alert dialogs, and color-coded badges carry this information.</p>
+          </div>
+          <div class="border rounded-lg p-5 bg-card space-y-2">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-primary"></div>
+              <h3 class="font-semibold text-sm">Risk-informed Solutions</h3>
+            </div>
+            <p class="text-sm text-muted-foreground">Actionable insight cards that connect risk detection to tailored recommendations. Cards, collapsibles, and drawers present these findings.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Key UI surfaces</h2>
+        <p class="text-sm text-muted-foreground mb-2">These are the primary screens that make up Echo. Each combines multiple components from this system.</p>
+        <div class="space-y-3">
+          <div class="border rounded-lg p-4 bg-card flex items-start gap-4">
+            <span class="text-primary font-mono text-sm font-bold shrink-0 mt-0.5">01</span>
+            <div>
+              <h3 class="font-semibold text-sm">Dashboards &amp; Overview</h3>
+              <p class="text-sm text-muted-foreground">Top-level metrics — call coverage, overall adherence, QA efficiency. Built with Cards, Charts, Badges, and Tabs.</p>
+            </div>
+          </div>
+          <div class="border rounded-lg p-4 bg-card flex items-start gap-4">
+            <span class="text-primary font-mono text-sm font-bold shrink-0 mt-0.5">02</span>
+            <div>
+              <h3 class="font-semibold text-sm">Process Adherence Reports</h3>
+              <p class="text-sm text-muted-foreground">Step-by-step SOP scoring with color-coded progress bars (green ≥67%, yellow 34–66%, red &lt;34%). Built with Progress, Badge, Separator, and Cards.</p>
+            </div>
+          </div>
+          <div class="border rounded-lg p-4 bg-card flex items-start gap-4">
+            <span class="text-primary font-mono text-sm font-bold shrink-0 mt-0.5">03</span>
+            <div>
+              <h3 class="font-semibold text-sm">Agent Performance Tables</h3>
+              <p class="text-sm text-muted-foreground">Agent name, call count, adherence %, lowest step. Built with Data Table, Badge, Pagination, and Tooltip.</p>
+            </div>
+          </div>
+          <div class="border rounded-lg p-4 bg-card flex items-start gap-4">
+            <span class="text-primary font-mono text-sm font-bold shrink-0 mt-0.5">04</span>
+            <div>
+              <h3 class="font-semibold text-sm">Insight Cards</h3>
+              <p class="text-sm text-muted-foreground">Flagged findings — identity verification shortcuts, security guidance skipped, knowledge gaps, top performers. Built with Card, Alert, and color-coded left-border accents.</p>
+            </div>
+          </div>
+          <div class="border rounded-lg p-4 bg-card flex items-start gap-4">
+            <span class="text-primary font-mono text-sm font-bold shrink-0 mt-0.5">05</span>
+            <div>
+              <h3 class="font-semibold text-sm">Queue Management</h3>
+              <p class="text-sm text-muted-foreground">Filterable queue views with tabs, collapsible filter panels, and paginated call lists. Built with Tabs, Collapsible, Select, Checkbox, and Data Table.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Design system foundations</h2>
+        <ul class="space-y-2 text-base">
+          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Built on Tailwind CSS and shadcn/ui with Radix UI primitives</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Accessible by default — WCAG 2.1 AA, keyboard navigation, screen reader support</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Echo brand tokens — primary purple (#6a47f0), adherence color scale, Geist typeface</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Dark mode support — light and dark themes with CSS variable switching</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>TypeScript first — full type safety across every component</span></li>
+        </ul>
       </section>
     </div>
   `,
@@ -50,33 +144,69 @@ componentDocsMap["introduction"] = {
 
 componentDocsMap["principles"] = {
   title: "Design Principles",
-  description: "Core principles that guide the Echo Design System",
+  description: "Core principles that guide every design decision in Echo.",
   html: `
-    <div class="space-y-8">
+    <div class="space-y-10">
+      <section class="space-y-4">
+        <p class="text-lg text-muted-foreground">
+          Echo serves contact centre leaders, QA managers, and workforce analysts who make high-stakes decisions about compliance, agent performance, and customer outcomes. These principles ensure the interface supports that responsibility.
+        </p>
+      </section>
+
       <section class="space-y-6">
-        <div class="space-y-2">
-          <h2 class="text-2xl font-semibold">Consistency</h2>
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold">Clarity over decoration</h2>
           <p class="text-base text-muted-foreground">
-            All components follow consistent patterns and conventions. Users should feel familiar with every interaction, reducing the learning curve and increasing productivity.
+            Echo users are scanning adherence scores, agent tables, and risk alerts under time pressure. Every element must communicate meaning immediately. Avoid decorative flourishes that compete with data — use color, weight, and spacing to create hierarchy, not ornament.
           </p>
+          <div class="border rounded-lg p-4 bg-muted/50 space-y-1">
+            <p class="text-sm font-medium">In practice</p>
+            <p class="text-sm text-muted-foreground">Adherence badges use a three-tier color system (green ≥67%, yellow 34–66%, red &lt;34%) so a QA manager can assess an agent's performance at a glance without reading the number.</p>
+          </div>
         </div>
-        <div class="space-y-2">
-          <h2 class="text-2xl font-semibold">Accessibility</h2>
+
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold">Consistency builds trust</h2>
           <p class="text-base text-muted-foreground">
-            Accessibility is not an afterthought. Every component is built with accessibility in mind, supporting keyboard navigation, screen readers, and other assistive technologies.
+            When a 91% adherence badge is green on the Agent Performance table, it must be the same green on the Process Adherence report and the Dashboard overview. Inconsistent visual language erodes confidence in the data — and in Echo itself.
           </p>
+          <div class="border rounded-lg p-4 bg-muted/50 space-y-1">
+            <p class="text-sm font-medium">In practice</p>
+            <p class="text-sm text-muted-foreground">Use shared design tokens for all score-related colors. Never hard-code a one-off green or red. Components like Badge, Progress, and Chart all pull from the same adherence color scale.</p>
+          </div>
         </div>
-        <div class="space-y-2">
-          <h2 class="text-2xl font-semibold">Simplicity</h2>
+
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold">Data density, not data overload</h2>
           <p class="text-base text-muted-foreground">
-            We believe in the power of simplicity. Our components are designed to be simple and straightforward, avoiding unnecessary complexity while maintaining flexibility.
+            Echo analyses thousands of calls. The interface must show enough information for informed decisions without overwhelming the user. Use progressive disclosure — summary first, detail on demand. Collapsible panels, tooltips, and drill-through patterns keep the surface clean.
           </p>
+          <div class="border rounded-lg p-4 bg-muted/50 space-y-1">
+            <p class="text-sm font-medium">In practice</p>
+            <p class="text-sm text-muted-foreground">The Dashboard shows top-level KPIs (call coverage, avg adherence, QA efficiency). Clicking into an agent row opens a detailed step-by-step breakdown. The user controls the depth.</p>
+          </div>
         </div>
-        <div class="space-y-2">
-          <h2 class="text-2xl font-semibold">Scalability</h2>
+
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold">Accessible by default</h2>
           <p class="text-base text-muted-foreground">
-            Echo is designed to scale with your needs. From small projects to large enterprises, the design system adapts to your requirements.
+            Echo is used by people across contact centre operations — team leads, QA analysts, compliance officers, and executives. Every component supports keyboard navigation, screen readers, and meets WCAG 2.1 AA. Never rely on color alone to convey meaning; always pair it with text or an icon.
           </p>
+          <div class="border rounded-lg p-4 bg-muted/50 space-y-1">
+            <p class="text-sm font-medium">In practice</p>
+            <p class="text-sm text-muted-foreground">Adherence scores always show the percentage number alongside the color indicator. Risk alerts include both a red icon and the word "Risk" so the meaning is clear regardless of how the user perceives color.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold">Composable, not custom</h2>
+          <p class="text-base text-muted-foreground">
+            Every new screen in Echo should be built from existing components. If a pattern doesn't exist, add it to the system — don't create a one-off. This keeps the codebase maintainable and ensures new features feel native from day one.
+          </p>
+          <div class="border rounded-lg p-4 bg-muted/50 space-y-1">
+            <p class="text-sm font-medium">In practice</p>
+            <p class="text-sm text-muted-foreground">The Insight Cards on the pilot report use the same Card component as the Dashboard metric cards, the same Badge for scores, and the same colored left-border accent pattern used throughout the app.</p>
+          </div>
         </div>
       </section>
     </div>
@@ -113,7 +243,7 @@ npm install lucide-react</code></pre>
       <section class="space-y-4">
         <h2 class="text-2xl font-semibold">Using Components</h2>
         <p class="text-base text-muted-foreground mb-4">
-          Import and use components in your application.
+          Import and use components in Echo.
         </p>
         <pre class="bg-muted rounded-lg p-4 overflow-x-auto"><code class="text-sm">import { Button } from "@/components/ui/button"
 

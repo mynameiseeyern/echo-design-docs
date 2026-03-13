@@ -118,6 +118,24 @@ export function AccordionExample() {
         />
       </ContentSection>
 
+      <ContentSection id="accordion-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Accordions expand SOP step details in process reports and organize FAQ sections in help and onboarding materials. They help QA managers quickly access detailed compliance information without cluttering the interface.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">SOP Step Details</p>
+              <p className="text-sm text-muted-foreground">Expanding full instructions for each step in process compliance reports</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Help & Onboarding FAQs</p>
+              <p className="text-sm text-muted-foreground">Organizing frequently asked questions about system features and SOP processes</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="accordion-accessibility" title="Accessibility">
         <div className="space-y-4">
           <p className="text-muted-foreground">
@@ -283,6 +301,24 @@ export function AvatarExample() {
         />
       </ContentSection>
 
+      <ContentSection id="avatar-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Avatars display agent profile images in performance tables and team views, providing visual identification in at-a-glance dashboards and leaderboards. They help team leads quickly locate and identify agents across the platform.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Agent Performance Tables</p>
+              <p className="text-sm text-muted-foreground">Visual identification of agents alongside their KPI metrics and adherence scores</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Team Views & Leaderboards</p>
+              <p className="text-sm text-muted-foreground">Quick agent identification in team hierarchies and performance leaderboards</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="avatar-accessibility" title="Accessibility">
         <div className="space-y-4">
           <p className="text-muted-foreground">
@@ -427,6 +463,24 @@ export function CollapsibleExample() {
         />
       </ContentSection>
 
+      <ContentSection id="collapsible-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Collapsible sections manage filter panels on queue management pages and create expandable report sections. They help keep dashboards clean while providing access to detailed filtering and configuration options.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Queue Management Filters</p>
+              <p className="text-sm text-muted-foreground">Expandable filter panels for queue status, time periods, and agent groupings</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Report Expandable Sections</p>
+              <p className="text-sm text-muted-foreground">Detailed drill-down sections in compliance and performance reports</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="collapsible-accessibility" title="Accessibility">
         <div className="space-y-4">
           <p className="text-muted-foreground">
@@ -560,6 +614,24 @@ export function SelectExample() {
         />
       </ContentSection>
 
+      <ContentSection id="select-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Select dropdowns are essential for filtering and configuration across Echo. They enable queue selection, date range picking, agent filtering, and SOP process selection in dashboards and report generators.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Queue & Agent Selection</p>
+              <p className="text-sm text-muted-foreground">Dropdown filters for selecting specific queues or agent groups in dashboards</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Date Range & SOP Pickers</p>
+              <p className="text-sm text-muted-foreground">Select controls for choosing analysis periods and SOP process filters</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="select-accessibility" title="Accessibility">
         <div className="space-y-4">
           <p className="text-muted-foreground">
@@ -686,6 +758,24 @@ export function SliderExample() {
           donts={[
             { description: "Don't hide the current value" }, { description: "Avoid too many slider steps (confusing UX)" }, { description: "Don't forget unit labels (px, $, %, etc.)" }, { description: "Avoid sliders with unclear ranges" }, { description: "Don't disable dragging feedback" }]}
         />
+      </ContentSection>
+
+      <ContentSection id="slider-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Sliders enable dynamic adjustment of adherence thresholds and score filters in report generation. They allow QA managers and compliance officers to quickly adjust filtering ranges for adherence analytics.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Adherence Threshold Ranges</p>
+              <p className="text-sm text-muted-foreground">Interactive sliders to adjust minimum/maximum adherence percentage filters</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Score Filtering</p>
+              <p className="text-sm text-muted-foreground">Sliders for setting performance score ranges in report generation</p>
+            </div>
+          </div>
+        </div>
       </ContentSection>
 
       <ContentSection id="slider-accessibility" title="Accessibility">
@@ -1056,6 +1146,24 @@ export function RadioGroupExample() {
         />
       </ContentSection>
 
+      <ContentSection id="radio-group-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Radio groups allow users to select mutually exclusive options like report types and export formats. They're used in report generation interfaces where QA managers choose between summary and detailed views or different output formats.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Report Type Selection</p>
+              <p className="text-sm text-muted-foreground">Radio options for choosing between Summary and Detailed adherence reports</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Export Format Selection</p>
+              <p className="text-sm text-muted-foreground">Radio buttons for selecting export format (PDF, CSV, Excel) when downloading reports</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="radio-group-accessibility" title="Accessibility">
         <div className="space-y-4">
           <p className="text-muted-foreground">
@@ -1192,6 +1300,24 @@ export function SeparatorExample() {
         />
       </ContentSection>
 
+      <ContentSection id="separator-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Separators provide visual organization in adherence reports and agent lists, breaking up dense information into digestible sections. They improve readability when displaying multiple agents or detailed compliance metrics.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Report Section Dividers</p>
+              <p className="text-sm text-muted-foreground">Visual separation between different sections in adherence and performance reports</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Agent Card Lists</p>
+              <p className="text-sm text-muted-foreground">Separators between individual agent performance cards in team views</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="separator-accessibility" title="Accessibility">
         <div className="space-y-4">
           <p className="text-muted-foreground">
@@ -1309,6 +1435,24 @@ export function ProgressExample() {
           donts={[
             { description: "Don't forget to display percentage value" }, { description: "Avoid silent progress (always show feedback)" }, { description: "Don't use for instant operations" }, { description: "Avoid false progress increments" }, { description: "Don't hide progress indicators during loading" }]}
         />
+      </ContentSection>
+
+      <ContentSection id="progress-echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Progress bars are the most critical batch2 component, displaying step-by-step adherence visualization in call processing reports. They use color coding (green/yellow/red) to quickly communicate compliance status, enabling at-a-glance SOP adherence assessment.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">SOP Step Adherence Bars</p>
+              <p className="text-sm text-muted-foreground">Color-coded progress indicators showing adherence percentage for each SOP step (green for compliant, yellow for warning, red for non-compliant)</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Call Processing Progress</p>
+              <p className="text-sm text-muted-foreground">Real-time progress indicators for multi-step call analysis and scoring</p>
+            </div>
+          </div>
+        </div>
       </ContentSection>
 
       <ContentSection id="progress-accessibility" title="Accessibility">

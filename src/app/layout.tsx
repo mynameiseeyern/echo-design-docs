@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Echo Design System - Documentation",
-  description: "A comprehensive design system built on Tailwind CSS and shadcn/ui components",
+  description: "The design system for the Echo product — components, patterns, and guidelines built on Tailwind CSS and shadcn/ui.",
 };
 
 export default function RootLayout({

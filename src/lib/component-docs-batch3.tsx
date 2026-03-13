@@ -783,6 +783,24 @@ export function SheetDemo() {
           <DosDonts dos={sheetDosDonts.dos} donts={sheetDosDonts.donts} />
         </ContentSection>
 
+        <ContentSection id="sheet-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Sheets provide side panels for viewing detailed call transcripts and agent coaching notes. They enable quick access to rich contextual information while maintaining focus on the main dashboard, essential for compliance review workflows.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Call Transcript Details</p>
+                <p className="text-sm text-muted-foreground">Side panel displaying full call transcripts with timestamp markers and SOP step alignment</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Coaching Notes Sidebar</p>
+                <p className="text-sm text-muted-foreground">Side panel for viewing and editing agent coaching notes related to specific calls</p>
+              </div>
+            </div>
+          </div>
+        </ContentSection>
+
         <ContentSection id="sheet-accessibility" title="Accessibility">
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>• Focus automatically moves to sheet content on open</li>
@@ -861,6 +879,24 @@ export function DropdownMenuDemo() {
 
         <ContentSection id="dropdown-usage" title="Usage Guidelines">
           <DosDonts dos={dropdownDosDonts.dos} donts={dropdownDosDonts.donts} />
+        </ContentSection>
+
+        <ContentSection id="dropdown-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Dropdown menus provide contextual actions on agent rows and reports. They enable team leads and compliance officers to quickly access profile information, export data, assign coaches, and trigger bulk actions without cluttering the interface.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Agent Row Actions</p>
+                <p className="text-sm text-muted-foreground">More actions menu on agent performance rows with options for View Profile, Export Data, and Assign Coach</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Report Export Options</p>
+                <p className="text-sm text-muted-foreground">Dropdown menus for selecting export formats and report variations</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="dropdown-accessibility" title="Accessibility">
@@ -1012,6 +1048,24 @@ export function HoverCardDemo() {
           <DosDonts dos={hoverCardDosDonts.dos} donts={hoverCardDosDonts.donts} />
         </ContentSection>
 
+        <ContentSection id="hover-card-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Hover cards display preview information on hover, such as agent statistics in leaderboards and SOP step details. They provide quick insights without opening modals, improving efficiency in browsing and analyzing data.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Agent Stats Previews</p>
+                <p className="text-sm text-muted-foreground">Hovering on agent names in leaderboards shows summary stats (calls handled, adherence%, top strengths)</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">SOP Step Previews</p>
+                <p className="text-sm text-muted-foreground">Hovering on step references displays full step instructions and compliance criteria</p>
+              </div>
+            </div>
+          </div>
+        </ContentSection>
+
         <ContentSection id="hover-card-accessibility" title="Accessibility">
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>• Triggered by hover and focus</li>
@@ -1101,6 +1155,24 @@ export function AlertDialogDemo() {
           <DosDonts dos={alertDialogDosDonts.dos} donts={alertDialogDosDonts.donts} />
         </ContentSection>
 
+        <ContentSection id="alert-dialog-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Alert dialogs confirm high-impact operations like SOP deletions and bulk agent reassignments. They prevent accidental data loss and ensure compliance officers and QA managers deliberately confirm critical actions.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">SOP Configuration Deletion</p>
+                <p className="text-sm text-muted-foreground">Confirmation dialog when deleting SOP configurations to prevent accidental removal</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Bulk Agent Reassignment</p>
+                <p className="text-sm text-muted-foreground">Confirmation dialog when performing bulk reassignment of agents to different queues or teams</p>
+              </div>
+            </div>
+          </div>
+        </ContentSection>
+
         <ContentSection id="alert-dialog-accessibility" title="Accessibility">
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>• Focuses on action button when opened</li>
@@ -1188,6 +1260,24 @@ export function PopoverDemo() {
           <DosDonts dos={popoverDosDonts.dos} donts={popoverDosDonts.donts} />
         </ContentSection>
 
+        <ContentSection id="popover-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Popovers provide contextual controls for filtering and display options without taking up permanent screen space. They're used for date range selection, quick filters, and column visibility toggles in dense tables and reports.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Quick Filters</p>
+                <p className="text-sm text-muted-foreground">Popover menus for applying quick filter combinations to call lists and agent views</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Date Range & Column Toggles</p>
+                <p className="text-sm text-muted-foreground">Popovers for date range picker and column visibility toggles in report tables</p>
+              </div>
+            </div>
+          </div>
+        </ContentSection>
+
         <ContentSection id="popover-accessibility" title="Accessibility">
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>• Escape key closes popover</li>
@@ -1259,6 +1349,24 @@ export function SkeletonDemo() {
 
         <ContentSection id="skeleton-usage" title="Usage Guidelines">
           <DosDonts dos={skeletonDosDonts.dos} donts={skeletonDosDonts.donts} />
+        </ContentSection>
+
+        <ContentSection id="skeleton-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Skeleton loaders display placeholder content while data is loading, providing visual feedback for dashboard KPI cards, agent tables, and charts. They improve perceived performance and set user expectations for data-heavy operations.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Dashboard KPI Cards</p>
+                <p className="text-sm text-muted-foreground">Skeleton loaders for adherence summary cards and performance metrics while data is fetching</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Table & Chart Loading</p>
+                <p className="text-sm text-muted-foreground">Skeleton rows for agent tables and chart loading states during data processing</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="skeleton-accessibility" title="Accessibility">
@@ -1333,6 +1441,24 @@ export function TextareaDemo() {
 
         <ContentSection id="textarea-usage" title="Usage Guidelines">
           <DosDonts dos={textareaDosDonts.dos} donts={textareaDosDonts.donts} />
+        </ContentSection>
+
+        <ContentSection id="textarea-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Text areas capture coaching notes and SOP descriptions, enabling team leads and compliance officers to document detailed feedback and configuration requirements. They're used in coaching workflows and SOP management interfaces.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Agent Coaching Notes</p>
+                <p className="text-sm text-muted-foreground">Multi-line input for documenting detailed coaching feedback and action items for agents</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">SOP Configuration & Comments</p>
+                <p className="text-sm text-muted-foreground">Text areas for describing SOP step requirements and adding report comments</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="textarea-accessibility" title="Accessibility">
@@ -1492,6 +1618,24 @@ export function ScrollAreaDemo() {
 
         <ContentSection id="scroll-area-usage" title="Usage Guidelines">
           <DosDonts dos={scrollAreaDosDonts.dos} donts={scrollAreaDosDonts.donts} />
+        </ContentSection>
+
+        <ContentSection id="scroll-area-echo-usage" title="Echo usage">
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              Scroll areas manage overflow content in tables and lists, enabling browsing of long agent lists, call transcripts, and extended SOP configurations. They maintain interface structure while handling variable-length content gracefully.
+            </p>
+            <div className="space-y-2">
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Agent Lists & Transcripts</p>
+                <p className="text-sm text-muted-foreground">Scrollable containers for long agent lists and full call transcript display</p>
+              </div>
+              <div className="border-l-2 border-primary pl-4 py-1">
+                <p className="text-sm font-medium">Extended SOP Step Lists</p>
+                <p className="text-sm text-muted-foreground">Scrollable areas for displaying complete SOP process definitions with many steps</p>
+              </div>
+            </div>
+          </div>
         </ContentSection>
 
         <ContentSection id="scroll-area-accessibility" title="Accessibility">

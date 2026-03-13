@@ -223,6 +223,28 @@ export function Demo() {
         />
       </ContentSection>
 
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Buttons drive critical interactions in Echo dashboards and workflows. Primary buttons trigger key actions like exporting compliance reports or drilling into agent details, while destructive variants confirm removal of SOP configurations. Consistent button labeling helps QA managers and team leads navigate the platform efficiently.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Dashboard Actions</p>
+              <p className="text-sm text-muted-foreground">Export reports, reset filters, apply date range selections</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Drill-down Navigation</p>
+              <p className="text-sm text-muted-foreground">View details on agent performance tables, access step-by-step adherence reports</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">SOP Configuration</p>
+              <p className="text-sm text-muted-foreground">Destructive variant for removing SOP steps, saving new workflow configurations</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="accessibility" title="Accessibility">
         <ul className="space-y-2 text-sm text-muted-foreground">
           <li>
@@ -482,6 +504,28 @@ export function Demo() {
         />
       </ContentSection>
 
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Badges are THE most critical visual component in Echo, displaying adherence scores with a three-tier color system that instantly communicates compliance status. Green badges (&ge;67%) signal strong adherence, yellow (34-66%) flags moderate concerns, and red (&lt;34%) highlights urgent coaching needs. Beyond adherence, badges label call status, agent tier classifications, and compliance risk levels across all dashboards.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Adherence Scores</p>
+              <p className="text-sm text-muted-foreground">Color-coded (green/yellow/red) on Agent Performance Snapshot tables and individual agent cards</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Status & Classification</p>
+              <p className="text-sm text-muted-foreground">Call status tags, agent tier labels, compliance status indicators on report cards</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Risk Indicators</p>
+              <p className="text-sm text-muted-foreground">Highlight identified compliance risks and deviation warnings in insight cards and trend charts</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="accessibility" title="Accessibility">
         <ul className="space-y-2 text-sm text-muted-foreground">
           <li>
@@ -719,6 +763,28 @@ export function Demo() {
             },
           ]}
         />
+      </ContentSection>
+
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Cards organize Echo's layered information architecture, from high-level KPI metrics to detailed insight cards. Dashboard cards surface key metrics like call coverage and average adherence at a glance, while Insight Cards on pilot reports flag specific findings with colored left-borders indicating severity. Agent summary cards consolidate performance data for quick team-lead reviews.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Dashboard Metrics</p>
+              <p className="text-sm text-muted-foreground">Display KPIs like call coverage %, average adherence %, and QA efficiency</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Insight Cards</p>
+              <p className="text-sm text-muted-foreground">Show flagged findings (identity verification shortcuts, security gaps, knowledge gaps) with colored left-border accents for severity</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Agent Summaries</p>
+              <p className="text-sm text-muted-foreground">Consolidate agent name, total calls, adherence %, and lowest-scoring SOP step</p>
+            </div>
+          </div>
+        </div>
       </ContentSection>
 
       <ContentSection id="accessibility" title="Accessibility">
@@ -992,6 +1058,28 @@ export function Demo() {
         />
       </ContentSection>
 
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Checkboxes enable powerful multi-select filtering across Echo's dashboards and bulk actions on agent/call data. Users filter by queue, agent, date ranges, and SOP steps to narrow compliance reviews. Bulk checkboxes in call lists and SOP configuration allow QA managers to apply coaching insights or update workflow rules at scale.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Multi-select Filters</p>
+              <p className="text-sm text-muted-foreground">Select specific queues, agents, date ranges, and SOP steps to refine dashboard views</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Bulk Actions</p>
+              <p className="text-sm text-muted-foreground">Check multiple calls or agents to apply coaching insights or compliance interventions</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">SOP Configuration</p>
+              <p className="text-sm text-muted-foreground">Enable/disable SOP steps during workflow setup and configuration workflows</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="accessibility" title="Accessibility">
         <ul className="space-y-2 text-sm text-muted-foreground">
           <li>
@@ -1219,6 +1307,28 @@ export function Demo() {
             },
           ]}
         />
+      </ContentSection>
+
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Input fields in Echo support rapid navigation and configuration. QA managers search for specific calls by keyword or filter agent names from large team rosters, while compliance officers enter detailed SOP step descriptions during workflow setup. Real-time search helps users find insights within large datasets.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Call Search</p>
+              <p className="text-sm text-muted-foreground">Search calls by keyword, call ID, or customer details</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Agent Filtering</p>
+              <p className="text-sm text-muted-foreground">Filter agent names from performance tables and team overviews</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">SOP Configuration</p>
+              <p className="text-sm text-muted-foreground">Enter detailed descriptions and names for SOP steps during workflow configuration</p>
+            </div>
+          </div>
+        </div>
       </ContentSection>
 
       <ContentSection id="accessibility" title="Accessibility">
@@ -1527,6 +1637,28 @@ export function Demo() {
         />
       </ContentSection>
 
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Switches toggle key Echo platform features and display preferences without page reloads. QA managers use switches to enable auto-refresh on dashboards during live call analysis, toggle notifications for critical compliance risks, and show/hide columns in agent performance tables based on analysis focus.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Dashboard Features</p>
+              <p className="text-sm text-muted-foreground">Enable auto-refresh for real-time metric updates, toggle notifications for compliance alerts</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Column Visibility</p>
+              <p className="text-sm text-muted-foreground">Show/hide columns in agent performance tables (calls, adherence %, lowest step, tier)</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">View Preferences</p>
+              <p className="text-sm text-muted-foreground">Toggle between detailed and summary views, enable advanced filtering options</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="accessibility" title="Accessibility">
         <ul className="space-y-2 text-sm text-muted-foreground">
           <li>
@@ -1798,6 +1930,28 @@ export function Demo() {
             },
           ]}
         />
+      </ContentSection>
+
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Tabs organize Echo's multi-dimensional compliance data without overwhelming users. Queue management pages toggle between Chart and Table views, dashboard sections navigate between Overview/Agents/Steps/Trends, and report tabs switch between Summary, Detail, and Export views. Tabs keep related data grouped while supporting focused analysis workflows.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">View Mode Toggle</p>
+              <p className="text-sm text-muted-foreground">Switch between Chart and Table views on queue pages and trend analysis</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Section Navigation</p>
+              <p className="text-sm text-muted-foreground">Navigate Overview/Agents/Steps/Trends sections on dashboards without page reloads</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Report Views</p>
+              <p className="text-sm text-muted-foreground">Toggle between Summary, Detail, and Export tabs on adherence and compliance reports</p>
+            </div>
+          </div>
+        </div>
       </ContentSection>
 
       <ContentSection id="accessibility" title="Accessibility">
@@ -2116,6 +2270,28 @@ export function Demo() {
             },
           ]}
         />
+      </ContentSection>
+
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Tooltips reduce cognitive load by clarifying Echo's specialized compliance terminology and metrics on hover. Tooltips explain adherence score thresholds (green/yellow/red) without interrupting analysis flow, reveal full SOP step names when truncated in dense tables, and display last-updated timestamps on dashboard KPIs. This approach keeps interfaces clean while enabling deep dives.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Metric Explanations</p>
+              <p className="text-sm text-muted-foreground">Explain adherence %, call coverage, and QA efficiency thresholds on hover</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Truncated Content</p>
+              <p className="text-sm text-muted-foreground">Display full SOP step names and agent names when truncated in performance tables</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Data Freshness</p>
+              <p className="text-sm text-muted-foreground">Show last-updated timestamps and data refresh status on dashboard KPI cards</p>
+            </div>
+          </div>
+        </div>
       </ContentSection>
 
       <ContentSection id="accessibility" title="Accessibility">
@@ -2474,6 +2650,28 @@ export function Demo() {
         />
       </ContentSection>
 
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Dialogs provide focused, interruption-free workflows for critical Echo actions requiring confirmation or detailed input. QA managers confirm SOP configuration changes before applying to live workflows, view full call transcripts with adherence annotations, and confirm bulk actions on agent lists. Dialogs ensure high-risk operations cannot be missed or reversed accidentally.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Confirmation Dialogs</p>
+              <p className="text-sm text-muted-foreground">Confirm SOP configuration changes, bulk coaching actions, and data exports</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Transcript Viewer</p>
+              <p className="text-sm text-muted-foreground">Display full call transcripts with step-by-step adherence annotations and timestamps</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Export Workflow</p>
+              <p className="text-sm text-muted-foreground">Confirm report export parameters before generating compliance datasets</p>
+            </div>
+          </div>
+        </div>
+      </ContentSection>
+
       <ContentSection id="accessibility" title="Accessibility">
         <ul className="space-y-2 text-sm text-muted-foreground">
           <li>
@@ -2803,6 +3001,28 @@ function AlertDoc() {
             },
           ]}
         />
+      </ContentSection>
+
+      <ContentSection id="echo-usage" title="Echo usage">
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            Alerts keep users informed of critical Echo events and status changes without requiring action. Compliance risk notifications flag adherence shortfalls or deviation patterns that require investigation, while system status alerts confirm data processing completion or integration errors. Strategic alert placement ensures compliance officers and team leads stay aligned on platform health.
+          </p>
+          <div className="space-y-2">
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Compliance Risks</p>
+              <p className="text-sm text-muted-foreground">Notify of adherence shortfalls, repeated violations, and flagged coaching opportunities</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">System Status</p>
+              <p className="text-sm text-muted-foreground">Inform of data processing completion, integration errors, and platform maintenance</p>
+            </div>
+            <div className="border-l-2 border-primary pl-4 py-1">
+              <p className="text-sm font-medium">Deviation Warnings</p>
+              <p className="text-sm text-muted-foreground">Alert when SOP adherence falls below thresholds or trends worsen significantly</p>
+            </div>
+          </div>
+        </div>
       </ContentSection>
 
       <ContentSection id="accessibility" title="Accessibility">
