@@ -83,6 +83,15 @@ const navSections: NavSection[] = [
       { title: "Tooltip", href: "/docs/tooltip" },
     ],
   },
+  {
+    title: "Patterns",
+    items: [
+      { title: "Sign In", href: "/docs/sign-in-pattern" },
+      { title: "Dashboard Overview", href: "/docs/dashboard-overview-pattern" },
+      { title: "Queues Table", href: "/docs/queues-table-pattern" },
+      { title: "Queues Chart", href: "/docs/queues-chart-pattern" },
+    ],
+  },
 ]
 
 export function Sidebar() {

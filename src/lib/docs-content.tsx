@@ -1418,6 +1418,616 @@ placeholderComponents.forEach((slug) => {
   }
 })
 
+componentDocsMap["sign-in-pattern"] = {
+  title: "Sign In",
+  description: "Authentication page pattern using Echo brand identity with email-based login flow.",
+  html: `
+    <div class="space-y-12">
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Overview</h2>
+        <p class="text-base leading-relaxed text-muted-foreground">
+          The Sign In pattern provides a branded authentication entry point for the Echo platform. It combines the Echo
+          logo with a clean, centered login form against decorative brand elements that reinforce the product identity.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Anatomy</h2>
+        <div class="space-y-3">
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Brand Logo</div><div class="text-sm text-muted-foreground">Echo wordmark positioned top-left for brand reinforcement</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Card Container</div><div class="text-sm text-muted-foreground">Centered card with the sign-in form, providing visual focus</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Email Input</div><div class="text-sm text-muted-foreground">Primary input field with label and placeholder text</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Continue Button</div><div class="text-sm text-muted-foreground">Full-width primary action button using echo.600 brand color</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Decorative Elements</div><div class="text-sm text-muted-foreground">Purple/blue gradient curves and shapes reinforcing the Echo brand palette</div></div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Components Used</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Input</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Label</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Button</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Typography</span>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Layout Guidelines</h2>
+        <div class="space-y-3">
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Viewport:</span> Full-screen centered layout with background fill</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Card Width:</span> Fixed width (~400px) centered horizontally and vertically</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Spacing:</span> 24px internal padding within the card container</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Background:</span> Neutral light background (background token) with decorative brand gradients</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Code Example</h2>
+        <pre class="bg-muted rounded-lg p-4 overflow-x-auto text-sm"><code>&lt;div className="min-h-screen flex items-center justify-center bg-background"&gt;
+  {/* Brand decorative elements */}
+  &lt;div className="absolute inset-0 overflow-hidden pointer-events-none"&gt;
+    &lt;div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-echo-400/20 to-echo-600/10 blur-3xl" /&gt;
+    &lt;div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-tr from-echo-500/15 to-echo-300/10 blur-3xl" /&gt;
+  &lt;/div&gt;
+
+  {/* Logo */}
+  &lt;div className="absolute top-8 left-8"&gt;
+    &lt;span className="text-2xl font-bold text-primary"&gt;Echo&lt;/span&gt;
+  &lt;/div&gt;
+
+  {/* Sign In Card */}
+  &lt;Card className="w-full max-w-md relative z-10"&gt;
+    &lt;CardHeader className="text-center"&gt;
+      &lt;CardTitle className="text-2xl"&gt;Sign in to Echo&lt;/CardTitle&gt;
+      &lt;CardDescription&gt;Enter your email to continue&lt;/CardDescription&gt;
+    &lt;/CardHeader&gt;
+    &lt;CardContent className="space-y-4"&gt;
+      &lt;div className="space-y-2"&gt;
+        &lt;Label htmlFor="email"&gt;Email&lt;/Label&gt;
+        &lt;Input id="email" type="email" placeholder="name@company.com" /&gt;
+      &lt;/div&gt;
+      &lt;Button className="w-full"&gt;Continue&lt;/Button&gt;
+    &lt;/CardContent&gt;
+  &lt;/Card&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Do's and Don'ts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border rounded-lg p-4 bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-green-600 font-semibold text-sm">✓ Do</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Use decorative brand elements to reinforce identity</li>
+              <li>• Keep the form simple — email first, then password</li>
+              <li>• Center the card vertically and horizontally</li>
+              <li>• Include the Echo logo for brand recognition</li>
+            </ul>
+          </div>
+          <div class="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-red-600 font-semibold text-sm">✗ Don't</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Don't overcrowd the sign-in form with too many fields</li>
+              <li>• Don't use non-brand colors for decorative elements</li>
+              <li>• Don't position the card off-center on desktop</li>
+              <li>• Don't omit the brand logo from the auth screen</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Accessibility</h2>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li>• <span class="font-semibold">Focus management:</span> Auto-focus the email input on page load</li>
+          <li>• <span class="font-semibold">Form labels:</span> Every input must have an associated label element</li>
+          <li>• <span class="font-semibold">Error states:</span> Show inline validation messages with aria-describedby</li>
+          <li>• <span class="font-semibold">Keyboard nav:</span> Tab order: email → continue button</li>
+          <li>• <span class="font-semibold">Decorative elements:</span> Use aria-hidden="true" on background decorations</li>
+        </ul>
+      </section>
+    </div>
+  `,
+}
+
+componentDocsMap["dashboard-overview-pattern"] = {
+  title: "Dashboard Overview",
+  description: "Primary dashboard layout with sidebar navigation, KPI metric cards, line charts, and scorecard widgets.",
+  html: `
+    <div class="space-y-12">
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Overview</h2>
+        <p class="text-base leading-relaxed text-muted-foreground">
+          The Dashboard Overview is the primary landing screen after authentication. It presents a high-level summary of
+          operational metrics using KPI cards, trend line charts, and scorecard widgets with gauge indicators. A persistent
+          sidebar provides navigation across the application sections.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Anatomy</h2>
+        <div class="space-y-3">
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Sidebar</div><div class="text-sm text-muted-foreground">Collapsible navigation with Echo branding, user avatar, and grouped menu items (Operations, Admin)</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Page Header</div><div class="text-sm text-muted-foreground">Page title ("Overview") with breadcrumb navigation and date filter</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">KPI Cards Row</div><div class="text-sm text-muted-foreground">3-column grid of metric cards showing value, label, and % change indicator</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Line Chart</div><div class="text-sm text-muted-foreground">Time-series chart showing trend data with echo brand colors</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Scorecard Grid</div><div class="text-sm text-muted-foreground">2-column grid of scorecard cards with gauge charts and metric values</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Dropdown Menu</div><div class="text-sm text-muted-foreground">Sidebar uses grouped dropdown for Operations and Admin sections</div></div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Components Used</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Sidebar</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Chart</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Badge</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Avatar</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Dropdown Menu</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Navigation Menu</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Separator</span>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">KPI Card Specification</h2>
+        <div class="space-y-3">
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Structure:</span> Metric value (text-3xl font-bold), label (text-sm text-muted-foreground), and change indicator badge</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Change Indicator:</span> Green badge with ↑ for positive change, red badge with ↓ for negative change, includes percentage value</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Example Metrics:</span> "Total Calls Taken" (1,234), "Available Agents" (56), "Avg Session Duration" (4:32)</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Grid Layout:</span> 3 equal-width columns with gap-4 on desktop, stacks to single column on mobile</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Code Example</h2>
+        <pre class="bg-muted rounded-lg p-4 overflow-x-auto text-sm"><code>&lt;div className="flex min-h-screen"&gt;
+  {/* Sidebar */}
+  &lt;Sidebar className="w-64 border-r" /&gt;
+
+  {/* Main Content */}
+  &lt;main className="flex-1 p-6 space-y-6"&gt;
+    {/* Page Header */}
+    &lt;div className="flex items-center justify-between"&gt;
+      &lt;div&gt;
+        &lt;h1 className="text-2xl font-bold"&gt;Overview&lt;/h1&gt;
+        &lt;p className="text-sm text-muted-foreground"&gt;Dashboard &gt; Overview&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;DateRangePicker /&gt;
+    &lt;/div&gt;
+
+    {/* KPI Cards */}
+    &lt;div className="grid grid-cols-3 gap-4"&gt;
+      &lt;Card&gt;
+        &lt;CardContent className="pt-6"&gt;
+          &lt;p className="text-sm text-muted-foreground"&gt;Total Calls Taken&lt;/p&gt;
+          &lt;p className="text-3xl font-bold"&gt;1,234&lt;/p&gt;
+          &lt;Badge variant="outline" className="text-green-600"&gt;↑ 12.5%&lt;/Badge&gt;
+        &lt;/CardContent&gt;
+      &lt;/Card&gt;
+      {/* ... more KPI cards */}
+    &lt;/div&gt;
+
+    {/* Trend Chart */}
+    &lt;Card&gt;
+      &lt;CardHeader&gt;
+        &lt;CardTitle&gt;Call Volume Trend&lt;/CardTitle&gt;
+      &lt;/CardHeader&gt;
+      &lt;CardContent&gt;
+        &lt;LineChart data={data} colors={["hsl(var(--chart-1))", "hsl(var(--chart-2))"]} /&gt;
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+
+    {/* Scorecard Grid */}
+    &lt;div className="grid grid-cols-2 gap-4"&gt;
+      &lt;ScorecardWidget title="Quality Score" value={87} /&gt;
+      &lt;ScorecardWidget title="CSAT Score" value={92} /&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Layout Guidelines</h2>
+        <div class="space-y-3">
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Sidebar Width:</span> 256px (w-64) fixed, collapsible to icon-only (w-16)</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Content Padding:</span> 24px (p-6) on all sides of the main content area</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Card Gap:</span> 16px (gap-4) between cards in the grid</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card">
+            <p class="text-sm"><span class="font-semibold">Section Gap:</span> 24px (space-y-6) between major content sections</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Do's and Don'ts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border rounded-lg p-4 bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-green-600 font-semibold text-sm">✓ Do</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Show the most important KPIs first in the card row</li>
+              <li>• Use consistent chart colors from the --chart-* token scale</li>
+              <li>• Include percentage change indicators on metric cards</li>
+              <li>• Provide date range filtering at the page level</li>
+            </ul>
+          </div>
+          <div class="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-red-600 font-semibold text-sm">✗ Don't</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Don't display more than 4 KPI cards in a single row</li>
+              <li>• Don't mix chart types without clear intent</li>
+              <li>• Don't omit trend indicators on metric cards</li>
+              <li>• Don't use non-Echo chart colors</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  `,
+}
+
+componentDocsMap["queues-table-pattern"] = {
+  title: "Queues Table",
+  description: "Data table pattern with color-coded score badges, pagination, breadcrumb navigation, and filter panels.",
+  html: `
+    <div class="space-y-12">
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Overview</h2>
+        <p class="text-base leading-relaxed text-muted-foreground">
+          The Queues Table pattern displays operational queue data in a structured table format with rich interactive features.
+          It includes color-coded score badges for quick visual assessment, expandable filter panels, breadcrumb navigation,
+          and pagination controls. The table supports both individual queue rows and summary aggregate views.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Anatomy</h2>
+        <div class="space-y-3">
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Breadcrumbs</div><div class="text-sm text-muted-foreground">Navigation path: Dashboard > Queues > [Queue Name]</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Page Title</div><div class="text-sm text-muted-foreground">Queue name with subtitle showing agent count and active calls</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Tab Toggle</div><div class="text-sm text-muted-foreground">Chart/Table view switcher using the Tabs component</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Data Table</div><div class="text-sm text-muted-foreground">Column-sortable table with agent names, scores, call metrics, and duration data</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Score Badges</div><div class="text-sm text-muted-foreground">Color-coded badges: Good (≥67, green), Fair (34-66, yellow), Low (0-33, red)</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Filter Panel</div><div class="text-sm text-muted-foreground">Right-side collapsible panel with checkbox filters for queues and agents</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Pagination</div><div class="text-sm text-muted-foreground">Bottom pagination controls with page numbers and rows-per-page selector</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Summary Row</div><div class="text-sm text-muted-foreground">Aggregate totals at table bottom showing sum of calls and average duration</div></div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Components Used</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Data Table</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Badge</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Tabs</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Pagination</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Checkbox</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Sidebar</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Separator</span>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Score Badge System</h2>
+        <p class="text-sm text-muted-foreground mb-3">Scores use a three-tier color system for instant visual assessment:</p>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="border rounded-lg p-4 bg-card text-center">
+            <div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 mb-2">Good: 87</div>
+            <p class="text-xs text-muted-foreground">Score ≥ 67</p>
+            <p class="text-xs text-muted-foreground">Green badge</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card text-center">
+            <div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 mb-2">Fair: 52</div>
+            <p class="text-xs text-muted-foreground">Score 34–66</p>
+            <p class="text-xs text-muted-foreground">Yellow badge</p>
+          </div>
+          <div class="border rounded-lg p-4 bg-card text-center">
+            <div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 mb-2">Low: 21</div>
+            <p class="text-xs text-muted-foreground">Score 0–33</p>
+            <p class="text-xs text-muted-foreground">Red badge</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Code Example</h2>
+        <pre class="bg-muted rounded-lg p-4 overflow-x-auto text-sm"><code>function ScoreBadge({ score }: { score: number }) {
+  const tier = score &gt;= 67 ? "good" : score &gt;= 34 ? "fair" : "low"
+  const styles = {
+    good: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
+    fair: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
+    low: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
+  }
+  return (
+    &lt;span className={\`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium \${styles[tier]}\`}&gt;
+      {score}
+    &lt;/span&gt;
+  )
+}
+
+// Table structure
+&lt;div className="flex gap-6"&gt;
+  {/* Main table area */}
+  &lt;div className="flex-1"&gt;
+    &lt;Tabs defaultValue="table"&gt;
+      &lt;TabsList&gt;
+        &lt;TabsTrigger value="chart"&gt;Chart&lt;/TabsTrigger&gt;
+        &lt;TabsTrigger value="table"&gt;Table&lt;/TabsTrigger&gt;
+      &lt;/TabsList&gt;
+    &lt;/Tabs&gt;
+
+    &lt;Table&gt;
+      &lt;TableHeader&gt;
+        &lt;TableRow&gt;
+          &lt;TableHead&gt;Agent&lt;/TableHead&gt;
+          &lt;TableHead&gt;Score&lt;/TableHead&gt;
+          &lt;TableHead&gt;Calls&lt;/TableHead&gt;
+          &lt;TableHead&gt;Avg Duration&lt;/TableHead&gt;
+        &lt;/TableRow&gt;
+      &lt;/TableHeader&gt;
+      &lt;TableBody&gt;
+        {agents.map((agent) =&gt; (
+          &lt;TableRow key={agent.id}&gt;
+            &lt;TableCell&gt;{agent.name}&lt;/TableCell&gt;
+            &lt;TableCell&gt;&lt;ScoreBadge score={agent.score} /&gt;&lt;/TableCell&gt;
+            &lt;TableCell&gt;{agent.calls}&lt;/TableCell&gt;
+            &lt;TableCell&gt;{agent.avgDuration}&lt;/TableCell&gt;
+          &lt;/TableRow&gt;
+        ))}
+      &lt;/TableBody&gt;
+    &lt;/Table&gt;
+
+    &lt;Pagination /&gt;
+  &lt;/div&gt;
+
+  {/* Filter Panel */}
+  &lt;aside className="w-64 border-l pl-6"&gt;
+    &lt;h3 className="font-semibold mb-4"&gt;Filters&lt;/h3&gt;
+    &lt;div className="space-y-3"&gt;
+      {queues.map((q) =&gt; (
+        &lt;label className="flex items-center gap-2"&gt;
+          &lt;Checkbox /&gt; {q.name}
+        &lt;/label&gt;
+      ))}
+    &lt;/div&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Do's and Don'ts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border rounded-lg p-4 bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-green-600 font-semibold text-sm">✓ Do</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Use consistent color-coded badges across all score columns</li>
+              <li>• Include a summary/totals row at the bottom of data tables</li>
+              <li>• Provide Chart/Table toggle for alternative data views</li>
+              <li>• Keep filter panel collapsible for smaller viewports</li>
+            </ul>
+          </div>
+          <div class="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-red-600 font-semibold text-sm">✗ Don't</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Don't use more than 3 tiers for score badges</li>
+              <li>• Don't hide pagination on tables with many rows</li>
+              <li>• Don't place filters above the table — use a side panel</li>
+              <li>• Don't omit breadcrumbs in nested table views</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Accessibility</h2>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li>• <span class="font-semibold">Score badges:</span> Include aria-label with the tier name (e.g., "Score: 87, Good")</li>
+          <li>• <span class="font-semibold">Color alone:</span> Never rely solely on color — always include text labels in badges</li>
+          <li>• <span class="font-semibold">Sortable columns:</span> Use aria-sort to indicate current sort direction</li>
+          <li>• <span class="font-semibold">Filter panel:</span> Announce active filter count to screen readers</li>
+          <li>• <span class="font-semibold">Pagination:</span> Use nav element with aria-label="Pagination"</li>
+        </ul>
+      </section>
+    </div>
+  `,
+}
+
+componentDocsMap["queues-chart-pattern"] = {
+  title: "Queues Chart",
+  description: "Chart visualization pattern with line charts, tab navigation, and collapsible filter panels with checkbox controls.",
+  html: `
+    <div class="space-y-12">
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Overview</h2>
+        <p class="text-base leading-relaxed text-muted-foreground">
+          The Queues Chart pattern provides a visual representation of queue performance data over time. It features a
+          multi-series line chart using the Echo chart color tokens, a Chart/Table tab toggle for switching between views,
+          and a right-side filter panel with collapsible sections containing checkbox controls for queue and agent filtering.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Anatomy</h2>
+        <div class="space-y-3">
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Tab Toggle</div><div class="text-sm text-muted-foreground">Chart/Table switcher — "Chart" tab active in this pattern, toggles to the Queues Table pattern</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Line Chart</div><div class="text-sm text-muted-foreground">Multi-series time-based chart with legend, using --chart-1 through --chart-5 colors</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Chart Legend</div><div class="text-sm text-muted-foreground">Color-coded legend below the chart mapping series to queue/agent names</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Filter Panel</div><div class="text-sm text-muted-foreground">Right-side panel with collapsible sections: "Queues" and "Agents" with checkbox filters</div></div>
+          <div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Collapsible Sections</div><div class="text-sm text-muted-foreground">Each filter group uses Collapsible component with chevron indicator</div></div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Components Used</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Chart</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Tabs</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Checkbox</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Collapsible</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Separator</span>
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Sidebar</span>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Chart Color Tokens</h2>
+        <p class="text-sm text-muted-foreground mb-3">Charts use the Echo design token scale for consistent branding:</p>
+        <div class="grid grid-cols-5 gap-3">
+          <div class="text-center">
+            <div class="w-full h-8 rounded-md mb-1" style="background-color: #c3b3ff;"></div>
+            <p class="text-xs font-mono text-muted-foreground">--chart-1</p>
+            <p class="text-xs text-muted-foreground">echo.300</p>
+          </div>
+          <div class="text-center">
+            <div class="w-full h-8 rounded-md mb-1" style="background-color: #7f5aff;"></div>
+            <p class="text-xs font-mono text-muted-foreground">--chart-2</p>
+            <p class="text-xs text-muted-foreground">echo.500</p>
+          </div>
+          <div class="text-center">
+            <div class="w-full h-8 rounded-md mb-1" style="background-color: #6a47f0;"></div>
+            <p class="text-xs font-mono text-muted-foreground">--chart-3</p>
+            <p class="text-xs text-muted-foreground">echo.600</p>
+          </div>
+          <div class="text-center">
+            <div class="w-full h-8 rounded-md mb-1" style="background-color: #5433d0;"></div>
+            <p class="text-xs font-mono text-muted-foreground">--chart-4</p>
+            <p class="text-xs text-muted-foreground">echo.700</p>
+          </div>
+          <div class="text-center">
+            <div class="w-full h-8 rounded-md mb-1" style="background-color: #4125aa;"></div>
+            <p class="text-xs font-mono text-muted-foreground">--chart-5</p>
+            <p class="text-xs text-muted-foreground">echo.800</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Code Example</h2>
+        <pre class="bg-muted rounded-lg p-4 overflow-x-auto text-sm"><code>&lt;div className="flex gap-6"&gt;
+  {/* Chart area */}
+  &lt;div className="flex-1 space-y-4"&gt;
+    &lt;Tabs defaultValue="chart"&gt;
+      &lt;TabsList&gt;
+        &lt;TabsTrigger value="chart"&gt;Chart&lt;/TabsTrigger&gt;
+        &lt;TabsTrigger value="table"&gt;Table&lt;/TabsTrigger&gt;
+      &lt;/TabsList&gt;
+    &lt;/Tabs&gt;
+
+    &lt;Card&gt;
+      &lt;CardContent className="pt-6"&gt;
+        &lt;LineChart
+          data={timeSeriesData}
+          xAxisKey="date"
+          series={[
+            { key: "queue1", color: "hsl(var(--chart-1))" },
+            { key: "queue2", color: "hsl(var(--chart-2))" },
+            { key: "queue3", color: "hsl(var(--chart-3))" },
+          ]}
+        /&gt;
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+  &lt;/div&gt;
+
+  {/* Filter Panel */}
+  &lt;aside className="w-64 border-l pl-6 space-y-4"&gt;
+    &lt;Collapsible defaultOpen&gt;
+      &lt;CollapsibleTrigger className="flex items-center justify-between w-full"&gt;
+        &lt;span className="font-semibold text-sm"&gt;Queues&lt;/span&gt;
+        &lt;ChevronDown className="h-4 w-4" /&gt;
+      &lt;/CollapsibleTrigger&gt;
+      &lt;CollapsibleContent className="space-y-2 mt-2"&gt;
+        {queues.map((q) =&gt; (
+          &lt;label className="flex items-center gap-2 text-sm"&gt;
+            &lt;Checkbox checked={q.selected} /&gt; {q.name}
+          &lt;/label&gt;
+        ))}
+      &lt;/CollapsibleContent&gt;
+    &lt;/Collapsible&gt;
+
+    &lt;Separator /&gt;
+
+    &lt;Collapsible defaultOpen&gt;
+      &lt;CollapsibleTrigger className="flex items-center justify-between w-full"&gt;
+        &lt;span className="font-semibold text-sm"&gt;Agents&lt;/span&gt;
+        &lt;ChevronDown className="h-4 w-4" /&gt;
+      &lt;/CollapsibleTrigger&gt;
+      &lt;CollapsibleContent className="space-y-2 mt-2"&gt;
+        {agents.map((a) =&gt; (
+          &lt;label className="flex items-center gap-2 text-sm"&gt;
+            &lt;Checkbox checked={a.selected} /&gt; {a.name}
+          &lt;/label&gt;
+        ))}
+      &lt;/CollapsibleContent&gt;
+    &lt;/Collapsible&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Do's and Don'ts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border rounded-lg p-4 bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-green-600 font-semibold text-sm">✓ Do</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Use --chart-* tokens for all chart series colors</li>
+              <li>• Provide a legend mapping colors to data series</li>
+              <li>• Make filter sections collapsible with clear group labels</li>
+              <li>• Link Chart/Table tabs so both views share the same filters</li>
+            </ul>
+          </div>
+          <div class="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-red-600 font-semibold text-sm">✗ Don't</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Don't display more than 5 series on a single line chart</li>
+              <li>• Don't use arbitrary colors — stick to the chart token scale</li>
+              <li>• Don't hide the filter panel without a toggle to reopen it</li>
+              <li>• Don't forget to show empty states when all filters are cleared</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Accessibility</h2>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li>• <span class="font-semibold">Chart alternative:</span> Always provide the Table tab as a data-accessible alternative to the chart</li>
+          <li>• <span class="font-semibold">Color contrast:</span> Chart colors maintain 3:1 contrast against the card background</li>
+          <li>• <span class="font-semibold">Screen readers:</span> Include a visually hidden summary of chart data trends</li>
+          <li>• <span class="font-semibold">Filter state:</span> Announce filter changes to screen readers with aria-live regions</li>
+          <li>• <span class="font-semibold">Keyboard:</span> Collapsible sections must be operable via Enter/Space keys</li>
+        </ul>
+      </section>
+    </div>
+  `,
+}
+
 export function getDocContent(slug: string): DocContent | null {
   return componentDocsMap[slug] || null
 }
