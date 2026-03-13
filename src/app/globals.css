@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
-}
+@variant dark (&:where(.dark, .dark *));
 
 * {
   @apply border-border;
@@ -100,8 +97,7 @@ html {
   --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+.dark {
     /* Background & Foreground */
     --background: 240 10% 4%;          /* zinc.950 #09090b */
     --foreground: 240 5% 96%;          /* zinc.100 #f4f4f5 */
@@ -130,8 +126,8 @@ html {
     --accent: 240 4% 16%;              /* zinc.800 #27272a */
     --accent-foreground: 240 5% 96%;   /* zinc.100 #f4f4f5 */
 
-    /* Destructive — zinc.400 (dark mode) */
-    --destructive: 240 5% 65%;         /* zinc.400 #a1a1aa */
+    /* Destructive — red.500 (dark mode) */
+    --destructive: 0 84% 60%;          /* red.500 #ef4444 */
     --destructive-foreground: 0 86% 97%; /* red.50 #fef2f2 */
 
     /* Border, Input, Ring */
@@ -155,10 +151,11 @@ html {
     --chart-3: 253 85% 61%;
     --chart-4: 253 62% 51%;
     --chart-5: 253 64% 41%;
-  }
 }
 
 @theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
