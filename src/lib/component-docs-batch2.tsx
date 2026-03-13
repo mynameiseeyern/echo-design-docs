@@ -112,9 +112,9 @@ export function AccordionExample() {
       <ContentSection id="accordion-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use for FAQs and frequently asked questions\" }, { description: \"Keep titles concise and descriptive\" }, { description: \"Use single selection for mutually exclusive content\" }, { description: \"Provide clear visual hierarchy\" }, { description: \"Ensure sufficient spacing between items" }]}
+            { description: "Use for FAQs and frequently asked questions" }, { description: "Keep titles concise and descriptive" }, { description: "Use single selection for mutually exclusive content" }, { description: "Provide clear visual hierarchy" }, { description: "Ensure sufficient spacing between items" }]}
           donts={[
-            { description: "Don't nest accordions too deeply\" }, { description: \"Avoid vague or ambiguous titles\" }, { description: \"Don't use for linear, sequential content\" }, { description: \"Avoid overly long content blocks\" }, { description: \"Don't hide critical information by default" }]}
+            { description: "Don't nest accordions too deeply" }, { description: "Avoid vague or ambiguous titles" }, { description: "Don't use for linear, sequential content" }, { description: "Avoid overly long content blocks" }, { description: "Don't hide critical information by default" }]}
         />
       </ContentSection>
 
@@ -277,9 +277,9 @@ export function AvatarExample() {
       <ContentSection id="avatar-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use initials as fallback for professional contexts\" }, { description: \"Always provide alt text for accessibility\" }, { description: \"Keep avatar sizes consistent within a context\" }, { description: \"Use for user identification in lists and profiles\" }, { description: \"Ensure fallback is always readable" }]}
+            { description: "Use initials as fallback for professional contexts" }, { description: "Always provide alt text for accessibility" }, { description: "Keep avatar sizes consistent within a context" }, { description: "Use for user identification in lists and profiles" }, { description: "Ensure fallback is always readable" }]}
           donts={[
-            { description: "Don't use avatars for non-user entities without clear context\" }, { description: \"Avoid overly large avatar sizes for inline usage\" }, { description: \"Don't forget to load images from secure sources\" }, { description: \"Avoid placeholder text in fallbacks\" }, { description: \"Don't skip alt text even for fallbacks" }]}
+            { description: "Don't use avatars for non-user entities without clear context" }, { description: "Avoid overly large avatar sizes for inline usage" }, { description: "Don't forget to load images from secure sources" }, { description: "Avoid placeholder text in fallbacks" }, { description: "Don't skip alt text even for fallbacks" }]}
         />
       </ContentSection>
 
@@ -421,9 +421,9 @@ export function CollapsibleExample() {
       <ContentSection id="collapsible-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use for optional or supplementary information\" }, { description: \"Provide clear, descriptive trigger labels\" }, { description: \"Animate height changes for better UX\" }, { description: \"Remember open/closed state if appropriate\" }, { description: \"Keep collapsed content self-contained" }]}
+            { description: "Use for optional or supplementary information" }, { description: "Provide clear, descriptive trigger labels" }, { description: "Animate height changes for better UX" }, { description: "Remember open/closed state if appropriate" }, { description: "Keep collapsed content self-contained" }]}
           donts={[
-            { description: "Don't hide essential information behind collapse\" }, { description: \"Avoid multiple nested collapsibles\" }, { description: \"Don't use vague trigger labels\" }, { description: \"Avoid sudden content appearance without animation\" }, { description: \"Don't load content asynchronously without feedback" }]}
+            { description: "Don't hide essential information behind collapse" }, { description: "Avoid multiple nested collapsibles" }, { description: "Don't use vague trigger labels" }, { description: "Avoid sudden content appearance without animation" }, { description: "Don't load content asynchronously without feedback" }]}
         />
       </ContentSection>
 
@@ -554,9 +554,9 @@ export function SelectExample() {
       <ContentSection id="select-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use clear, descriptive option labels\" }, { description: \"Provide a meaningful placeholder\" }, { description: \"Group related options when needed\" }, { description: \"Sort options logically (alphabetical, frequency, etc.)\" }, { description: \"Show selected value clearly" }]}
+            { description: "Use clear, descriptive option labels" }, { description: "Provide a meaningful placeholder" }, { description: "Group related options when needed" }, { description: "Sort options logically (alphabetical, frequency, etc.)" }, { description: "Show selected value clearly" }]}
           donts={[
-            { description: "Don't use vague option names\" }, { description: \"Avoid too many options (consider search)\" }, { description: \"Don't change options without user action\" }, { description: \"Avoid mixing different option types\" }, { description: \"Don't hide the selected value" }]}
+            { description: "Don't use vague option names" }, { description: "Avoid too many options (consider search)" }, { description: "Don't change options without user action" }, { description: "Avoid mixing different option types" }, { description: "Don't hide the selected value" }]}
         />
       </ContentSection>
 
@@ -682,9 +682,9 @@ export function SliderExample() {
       <ContentSection id="slider-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Display current value next to slider\" }, { description: \"Use appropriate min/max values for context\" }, { description: \"Show unit labels clearly\" }, { description: \"Provide keyboard input as alternative\" }, { description: \"Update preview in real-time as user drags" }]}
+            { description: "Display current value next to slider" }, { description: "Use appropriate min/max values for context" }, { description: "Show unit labels clearly" }, { description: "Provide keyboard input as alternative" }, { description: "Update preview in real-time as user drags" }]}
           donts={[
-            { description: "Don't hide the current value\" }, { description: \"Avoid too many slider steps (confusing UX)\" }, { description: \"Don't forget unit labels (px, $, %, etc.)\" }, { description: \"Avoid sliders with unclear ranges\" }, { description: \"Don't disable dragging feedback" }]}
+            { description: "Don't hide the current value" }, { description: "Avoid too many slider steps (confusing UX)" }, { description: "Don't forget unit labels (px, $, %, etc.)" }, { description: "Avoid sliders with unclear ranges" }, { description: "Don't disable dragging feedback" }]}
         />
       </ContentSection>
 
@@ -792,9 +792,9 @@ export function ToggleExample() {
       <ContentSection id="toggle-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use for binary on/off states\" }, { description: \"Provide clear icons that indicate state\" }, { description: \"Show active/inactive states distinctly\" }, { description: \"Use consistent size within context\" }, { description: \"Add labels or tooltips for clarity" }]}
+            { description: "Use for binary on/off states" }, { description: "Provide clear icons that indicate state" }, { description: "Show active/inactive states distinctly" }, { description: "Use consistent size within context" }, { description: "Add labels or tooltips for clarity" }]}
           donts={[
-            { description: "Don't use vague or unclear icons\" }, { description: \"Avoid making active state ambiguous\" }, { description: \"Don't mix different toggle styles\" }, { description: \"Avoid placing toggles where they're easily missed\" }, { description: \"Don't forget to indicate state change" }]}
+            { description: "Don't use vague or unclear icons" }, { description: "Avoid making active state ambiguous" }, { description: "Don't mix different toggle styles" }, { description: "Avoid placing toggles where they're easily missed" }, { description: "Don't forget to indicate state change" }]}
         />
       </ContentSection>
 
@@ -913,9 +913,9 @@ export function ToggleGroupExample() {
       <ContentSection id="toggle-group-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use single type for mutually exclusive options\" }, { description: \"Use multiple type for independent selections\" }, { description: \"Provide clear, distinct icons for each option\" }, { description: \"Show selected state clearly\" }, { description: \"Group related toggle items together" }]}
+            { description: "Use single type for mutually exclusive options" }, { description: "Use multiple type for independent selections" }, { description: "Provide clear, distinct icons for each option" }, { description: "Show selected state clearly" }, { description: "Group related toggle items together" }]}
           donts={[
-            { description: "Don't mix single and multiple types in same group\" }, { description: \"Avoid too many toggle items in one group (5+)\" }, { description: \"Don't use similar icons that confuse users\" }, { description: \"Avoid unclear or ambiguous toggle purposes\" }, { description: \"Don't hide toggle purpose behind icons alone" }]}
+            { description: "Don't mix single and multiple types in same group" }, { description: "Avoid too many toggle items in one group (5+)" }, { description: "Don't use similar icons that confuse users" }, { description: "Avoid unclear or ambiguous toggle purposes" }, { description: "Don't hide toggle purpose behind icons alone" }]}
         />
       </ContentSection>
 
@@ -1050,9 +1050,9 @@ export function RadioGroupExample() {
       <ContentSection id="radio-group-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use for single selection from mutually exclusive options\" }, { description: \"Always pair RadioGroupItem with Label\" }, { description: \"Use htmlFor attribute to link labels\" }, { description: \"Provide clear, concise option labels\" }, { description: \"Group related radio items together" }]}
+            { description: "Use for single selection from mutually exclusive options" }, { description: "Always pair RadioGroupItem with Label" }, { description: "Use htmlFor attribute to link labels" }, { description: "Provide clear, concise option labels" }, { description: "Group related radio items together" }]}
           donts={[
-            { description: "Don't use radio groups for multiple selections (use checkboxes)\" }, { description: \"Avoid too many radio options (consider select or radiogroup)\" }, { description: \"Don't make option labels unclear or ambiguous\" }, { description: \"Avoid changing options after user selection\" }, { description: \"Don't disable all options without explanation" }]}
+            { description: "Don't use radio groups for multiple selections (use checkboxes)" }, { description: "Avoid too many radio options (consider select or radiogroup)" }, { description: "Don't make option labels unclear or ambiguous" }, { description: "Avoid changing options after user selection" }, { description: "Don't disable all options without explanation" }]}
         />
       </ContentSection>
 
@@ -1186,9 +1186,9 @@ export function SeparatorExample() {
       <ContentSection id="separator-usage" title="Usage Guidelines">
         <DosDonts
           dos={[
-            { description: "Use to separate distinct sections or content areas\" }, { description: \"Apply subtle styling that doesn't overwhelm content\" }, { description: \"Use for visual hierarchy and organization\" }, { description: \"Employ consistent separator width and color\" }, { description: \"Consider using decorative separators sparingly" }]}
+            { description: "Use to separate distinct sections or content areas" }, { description: "Apply subtle styling that doesn't overwhelm content" }, { description: "Use for visual hierarchy and organization" }, { description: "Employ consistent separator width and color" }, { description: "Consider using decorative separators sparingly" }]}
           donts={[
-            { description: "Don't overuse separators throughout page\" }, { description: \"Avoid making separators too prominent\" }, { description: \"Don't use instead of proper spacing/padding\" }, { description: \"Avoid unclear purpose for decorative separators\" }, { description: \"Don't ignore semantic meaning of separated content" }]}
+            { description: "Don't overuse separators throughout page" }, { description: "Avoid making separators too prominent" }, { description: "Don't use instead of proper spacing/padding" }, { description: "Avoid unclear purpose for decorative separators" }, { description: "Don't ignore semantic meaning of separated content" }]}
         />
       </ContentSection>
 
@@ -1305,9 +1305,9 @@ export function ProgressExample() {
 
       <ContentSection id="progress-usage" title="Usage Guidelines">
         <DosDonts
-          dos={[ { description: "Always show a percentage or description\" }, { description: \"Use for long-running operations and uploads\" }, { description: \"Update progress in real-time for accuracy\" }, { description: \"Show estimated time remaining when available\" }, { description: \"Use appropriate colors to indicate status" }]}
+          dos={[ { description: "Always show a percentage or description" }, { description: "Use for long-running operations and uploads" }, { description: "Update progress in real-time for accuracy" }, { description: "Show estimated time remaining when available" }, { description: "Use appropriate colors to indicate status" }]}
           donts={[
-            { description: "Don't forget to display percentage value\" }, { description: \"Avoid silent progress (always show feedback)\" }, { description: \"Don't use for instant operations\" }, { description: \"Avoid false progress increments\" }, { description: \"Don't hide progress indicators during loading" }]}
+            { description: "Don't forget to display percentage value" }, { description: "Avoid silent progress (always show feedback)" }, { description: "Don't use for instant operations" }, { description: "Avoid false progress increments" }, { description: "Don't hide progress indicators during loading" }]}
         />
       </ContentSection>
 
