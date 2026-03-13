@@ -259,38 +259,143 @@ export function MyComponent() {
 
 componentDocsMap["typography"] = {
   title: "Typography",
-  description: "Text styles and font scale",
+  description: "Font families, type scale, numeric display rules, and text styling guidelines.",
   html: `
-    <div class="space-y-8">
+    <div class="space-y-12">
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Font Families</h2>
+        <p class="text-base text-muted-foreground mb-6">
+          Echo uses two font families: <strong>Geist Sans</strong> as the primary typeface for all UI text, and <strong>Geist Mono</strong> as the monospaced typeface reserved for numeric values, code, and technical content.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="border rounded-lg p-6 bg-card space-y-3">
+            <p class="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Sans — Primary</p>
+            <p class="text-3xl font-bold" style="font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;">Geist Sans</p>
+            <p class="text-sm text-muted-foreground" style="font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz</p>
+            <p class="text-xs text-muted-foreground">Used for headings, body text, labels, buttons, and all general UI copy.</p>
+          </div>
+          <div class="border rounded-lg p-6 bg-card space-y-3">
+            <p class="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Mono — Numbers &amp; Code</p>
+            <p class="text-3xl font-bold font-mono">Geist Mono</p>
+            <p class="text-sm text-muted-foreground font-mono">0123456789 · $1,234.56 · 87% · 4:32</p>
+            <p class="text-xs text-muted-foreground">Used for all numeric values, KPI metrics, scores, durations, percentages, currency, code snippets, and technical data.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Numeric Typography Rule</h2>
+        <div class="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg">
+          <p class="text-sm font-semibold text-foreground">All numbers must use Geist Mono (<code class="text-xs bg-muted px-1.5 py-0.5 rounded">font-mono</code>)</p>
+          <p class="text-sm text-muted-foreground mt-1">This ensures consistent character widths for numeric data, preventing layout shifts when values update and improving readability in tables, dashboards, and metric cards.</p>
+        </div>
+        <div class="space-y-3 mt-4">
+          <p class="text-sm font-semibold">Applies to:</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="border rounded-lg p-3 bg-card text-center">
+              <p class="text-2xl font-bold font-mono">1,234</p>
+              <p class="text-xs text-muted-foreground mt-1">KPI values</p>
+            </div>
+            <div class="border rounded-lg p-3 bg-card text-center">
+              <p class="text-2xl font-bold font-mono">87%</p>
+              <p class="text-xs text-muted-foreground mt-1">Percentages</p>
+            </div>
+            <div class="border rounded-lg p-3 bg-card text-center">
+              <p class="text-2xl font-bold font-mono">4:32</p>
+              <p class="text-xs text-muted-foreground mt-1">Durations</p>
+            </div>
+            <div class="border rounded-lg p-3 bg-card text-center">
+              <p class="text-2xl font-bold font-mono">$12.50</p>
+              <p class="text-xs text-muted-foreground mt-1">Currency</p>
+            </div>
+            <div class="border rounded-lg p-3 bg-card text-center">
+              <p class="text-2xl font-bold font-mono">#42</p>
+              <p class="text-xs text-muted-foreground mt-1">IDs &amp; counts</p>
+            </div>
+            <div class="border rounded-lg p-3 bg-card text-center">
+              <p class="text-2xl font-bold font-mono">+12.5%</p>
+              <p class="text-xs text-muted-foreground mt-1">Change indicators</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="space-y-4">
         <h2 class="text-2xl font-semibold">Font Scale</h2>
         <p class="text-base text-muted-foreground mb-6">
           Echo uses a carefully curated type scale to maintain visual hierarchy and readability.
         </p>
         <div class="space-y-4">
-          <div class="text-xs">Text XS - Extra Small</div>
-          <div class="text-sm">Text SM - Small</div>
-          <div class="text-base">Text Base - Regular</div>
-          <div class="text-lg">Text LG - Large</div>
-          <div class="text-xl">Text XL - Extra Large</div>
-          <div class="text-2xl">Text 2XL</div>
-          <div class="text-3xl">Text 3XL</div>
-          <div class="text-4xl">Text 4XL</div>
-          <div class="text-5xl">Text 5XL</div>
-          <div class="text-7xl">Text 7XL</div>
-          <div class="text-8xl">Text 8XL</div>
-          <div class="text-9xl">Text 9XL</div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">xs</span><span class="text-xs">Text XS — 12px / 0.75rem</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">sm</span><span class="text-sm">Text SM — 14px / 0.875rem</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">base</span><span class="text-base">Text Base — 16px / 1rem</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">lg</span><span class="text-lg">Text LG — 18px / 1.125rem</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">xl</span><span class="text-xl">Text XL — 20px / 1.25rem</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">2xl</span><span class="text-2xl">Text 2XL — 24px / 1.5rem</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">3xl</span><span class="text-3xl">Text 3XL — 30px / 1.875rem</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-16 font-mono">4xl</span><span class="text-4xl">Text 4XL — 36px / 2.25rem</span></div>
+          <div class="flex items-baseline gap-4"><span class="text-xs text-muted-foreground w-16 font-mono">5xl</span><span class="text-5xl">Text 5XL — 48px / 3rem</span></div>
         </div>
       </section>
 
       <section class="space-y-4">
-        <h2 class="text-2xl font-semibold">Usage</h2>
-        <p class="text-base text-muted-foreground mb-4">
-          Apply typography classes using Tailwind utilities.
-        </p>
-        <pre class="bg-muted rounded-lg p-4 overflow-x-auto"><code class="text-sm">&lt;h1 class="text-4xl font-bold"&gt;Heading&lt;/h1&gt;
-&lt;p class="text-base"&gt;Body text&lt;/p&gt;
-&lt;span class="text-sm text-muted-foreground"&gt;Caption&lt;/span&gt;</code></pre>
+        <h2 class="text-2xl font-semibold">Font Weights</h2>
+        <div class="space-y-3">
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-24 font-mono">normal (400)</span><span class="text-lg font-normal">The quick brown fox jumps over the lazy dog</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-24 font-mono">medium (500)</span><span class="text-lg font-medium">The quick brown fox jumps over the lazy dog</span></div>
+          <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-24 font-mono">semibold (600)</span><span class="text-lg font-semibold">The quick brown fox jumps over the lazy dog</span></div>
+          <div class="flex items-baseline gap-4"><span class="text-xs text-muted-foreground w-24 font-mono">bold (700)</span><span class="text-lg font-bold">The quick brown fox jumps over the lazy dog</span></div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Code Example</h2>
+        <pre class="bg-muted rounded-lg p-4 overflow-x-auto"><code class="text-sm">{/* Headings — Geist Sans */}
+&lt;h1 className="text-4xl font-bold"&gt;Page Title&lt;/h1&gt;
+&lt;h2 className="text-2xl font-semibold"&gt;Section Title&lt;/h2&gt;
+
+{/* Body — Geist Sans */}
+&lt;p className="text-base"&gt;Body text&lt;/p&gt;
+&lt;span className="text-sm text-muted-foreground"&gt;Caption&lt;/span&gt;
+
+{/* Numbers — Geist Mono (ALWAYS use font-mono for numeric values) */}
+&lt;span className="text-3xl font-bold font-mono"&gt;1,234&lt;/span&gt;
+&lt;span className="text-sm font-mono"&gt;87%&lt;/span&gt;
+&lt;span className="text-lg font-mono"&gt;$12.50&lt;/span&gt;
+&lt;span className="text-sm font-mono"&gt;4:32&lt;/span&gt;
+
+{/* KPI Card example */}
+&lt;Card&gt;
+  &lt;CardContent className="pt-6"&gt;
+    &lt;p className="text-sm text-muted-foreground"&gt;Total Calls&lt;/p&gt;
+    &lt;p className="text-3xl font-bold font-mono"&gt;1,234&lt;/p&gt;
+    &lt;Badge className="font-mono"&gt;+12.5%&lt;/Badge&gt;
+  &lt;/CardContent&gt;
+&lt;/Card&gt;</code></pre>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Do's and Don'ts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border rounded-lg p-4 bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-green-600 font-semibold text-sm">✓ Do</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Use <code class="bg-muted px-1 rounded text-xs">font-mono</code> for all numeric values (KPIs, scores, durations, prices)</li>
+              <li>• Use the type scale consistently — don't create custom sizes</li>
+              <li>• Use font-semibold or font-bold for headings, font-normal for body</li>
+              <li>• Use text-muted-foreground for secondary/supporting text</li>
+            </ul>
+          </div>
+          <div class="border rounded-lg p-4 bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800">
+            <div class="flex items-center gap-2 mb-2"><span class="text-red-600 font-semibold text-sm">✗ Don't</span></div>
+            <ul class="text-sm space-y-1 text-muted-foreground">
+              <li>• Don't display numbers in the sans-serif font — always use Geist Mono</li>
+              <li>• Don't mix font families within a single label or heading</li>
+              <li>• Don't use more than 3 font sizes on a single screen</li>
+              <li>• Don't apply font-mono to non-numeric body text (except code)</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </div>
   `,
@@ -1315,108 +1420,14 @@ export function MySwitch() {
   `,
 }
 
-// Placeholder pages for remaining components
-const placeholderComponents = [
-  "accordion",
-  "alert",
-  "avatar",
-  "button-group",
-  "carousel",
-  "chart",
-  "collapsible",
-  "context-menu",
-  "data-table",
-  "date-picker",
-  "drawer",
-  "dropdown-menu",
-  "empty",
-  "field",
-  "hover-card",
-  "input-group",
-  "input-otp",
-  "keyboard-shortcuts",
-  "menubar",
-  "navigation-menu",
-  "pagination",
-  "radio-group",
-  "resizable",
-  "select",
-  "separator",
-  "sheet",
-  "sidebar",
-  "skeleton",
-  "slider",
-  "sonner",
-  "spinner",
-  "textarea",
-  "toggle",
-  "toggle-group",
-  "label",
-]
+// Import full component documentation from batch files
+import batch1 from "./docs-batch1"
+import batch2 from "./docs-batch2"
+import batch3 from "./docs-batch3"
+import batch4 from "./docs-batch4"
 
-placeholderComponents.forEach((slug) => {
-  const title = slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ")
-
-  componentDocsMap[slug] = {
-    title,
-    description: `${title} component documentation`,
-    html: `
-      <div class="space-y-8">
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Coming Soon</h2>
-          <p class="text-base text-muted-foreground">
-            Documentation for the ${title} component is coming soon. Please check back later.
-          </p>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Preview</h2>
-          <div class="border rounded-lg p-8 bg-card text-center text-muted-foreground">
-            Component preview will appear here
-          </div>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Purpose & Rationale</h2>
-          <p class="text-base text-muted-foreground">Documentation coming soon.</p>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Anatomy</h2>
-          <p class="text-base text-muted-foreground">Documentation coming soon.</p>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Variants</h2>
-          <p class="text-base text-muted-foreground">Documentation coming soon.</p>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Do's and Don'ts</h2>
-          <p class="text-base text-muted-foreground">Documentation coming soon.</p>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Code Example</h2>
-          <p class="text-base text-muted-foreground">Code examples coming soon.</p>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Accessibility</h2>
-          <p class="text-base text-muted-foreground">Documentation coming soon.</p>
-        </section>
-
-        <section class="space-y-4">
-          <h2 class="text-2xl font-semibold">Content & Style Guidelines</h2>
-          <p class="text-base text-muted-foreground">Documentation coming soon.</p>
-        </section>
-      </div>
-    `,
-  }
-})
+// Merge all batch docs into the main map
+Object.assign(componentDocsMap, batch1, batch2, batch3, batch4)
 
 componentDocsMap["sign-in-pattern"] = {
   title: "Sign In",
