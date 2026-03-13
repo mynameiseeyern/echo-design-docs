@@ -131,6 +131,12 @@ const navSections: NavSection[] = [
       { title: "Queues Chart", href: "/docs/queues-chart-pattern" },
     ],
   },
+  {
+    title: "Resources",
+    items: [
+      { title: "Inspiration", href: "/docs/inspiration" },
+    ],
+  },
 ]
 
 interface CategoryItemProps {

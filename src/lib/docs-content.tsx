@@ -347,6 +347,241 @@ componentDocsMap["queues-chart-pattern"] = {
 }
 
 // ============================================
+// Resources — Inspiration Directory
+// ============================================
+
+componentDocsMap["inspiration"] = {
+  title: "Inspiration",
+  description: "Open source shadcn/ui kits, block libraries, and component collections for design and development inspiration.",
+  html: `
+    <div class="space-y-12">
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Official</h2>
+        <p class="text-muted-foreground">The canonical source for shadcn/ui components and blocks.</p>
+        <div class="grid gap-4">
+          <a href="https://ui.shadcn.com" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">shadcn/ui</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">ui.shadcn.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">The foundation — beautifully designed, accessible components and a code distribution platform. Open source, open code.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Components</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Blocks</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Registry</span>
+            </div>
+          </a>
+          <a href="https://github.com/shadcn-ui/ui" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">shadcn-ui/ui — GitHub</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">github.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">The official open-source repository. Explore the source for every component, block, and the CLI registry.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Source Code</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">CLI</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Block Libraries</h2>
+        <p class="text-muted-foreground">Pre-built page sections — hero areas, pricing cards, auth forms, dashboards — ready to drop in.</p>
+        <div class="grid gap-4">
+          <a href="https://shadcnblocks.com" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">shadcnblocks</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">shadcnblocks.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">The largest third-party block library — 1,390+ blocks, 1,189 component variants, 13 complete templates. Free and open source. CLI-installable.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">1,390+ Blocks</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Marketing</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Templates</span>
+            </div>
+          </a>
+          <a href="https://github.com/shadcnspace/shadcnspace" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">Shadcn Space</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">github.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">100+ components, 51+ reusable blocks and layouts, dashboard UI kits. Built with React, Tailwind, Radix UI, and Base UI. No runtime dependencies.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">100+ Components</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">51+ Blocks</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Dashboards</span>
+            </div>
+          </a>
+          <a href="https://blocks.so" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">blocks.so</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">blocks.so</span>
+            </div>
+            <p class="text-sm text-muted-foreground">60+ free, beautifully designed, accessible blocks built with React, Tailwind CSS, and Next.js. Copy-paste ready.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">60+ Blocks</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Free</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Next.js</span>
+            </div>
+          </a>
+          <a href="https://shadcnuikit.com" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">shadcn UI Kit</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">shadcnuikit.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">151 blocks, 503 free components, 60 real-world examples. 12 admin dashboards, 11 web app templates. Next.js 16, React 19, Tailwind v4.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">151 Blocks</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Dashboards</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">eCommerce</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Animation &amp; Effects Libraries</h2>
+        <p class="text-muted-foreground">Component libraries that pair with shadcn/ui to add motion, transitions, and visual polish.</p>
+        <div class="grid gap-4">
+          <a href="https://magicui.design" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">Magic UI</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">magicui.design</span>
+            </div>
+            <p class="text-sm text-muted-foreground">150+ free animated components built with React, TypeScript, Tailwind CSS, and Motion. The perfect animation companion for shadcn/ui.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">150+ Components</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Animations</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Free</span>
+            </div>
+          </a>
+          <a href="https://ui.aceternity.com" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">Aceternity UI</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">ui.aceternity.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">Copy-paste components with stunning visual effects — parallax scroll, 3D cards, spotlight, aurora backgrounds. Built with Tailwind and Framer Motion.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Effects</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Framer Motion</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">3D</span>
+            </div>
+          </a>
+          <a href="https://originui.com" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">Origin UI</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">originui.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">Hundreds of copy-paste components for rapidly building modern app interfaces. Slightly more advanced variants than base shadcn — timelines, rich dialogs, etc.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Advanced Components</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Open Source</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Starter Kits &amp; Dashboards</h2>
+        <p class="text-muted-foreground">Production-ready starters that demonstrate real-world shadcn/ui patterns at scale.</p>
+        <div class="grid gap-4">
+          <a href="https://github.com/shadcn-ui/taxonomy" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">Taxonomy</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">19.2k ⭐</span>
+            </div>
+            <p class="text-sm text-muted-foreground">The original shadcn/ui showcase app — reference implementation for Next.js app router patterns. Built by shadcn.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">App Router</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Auth</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Reference</span>
+            </div>
+          </a>
+          <a href="https://github.com/shadcn-ui/ui/tree/main/apps/www" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">shadcn/ui Docs Site (source)</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">github.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">The source code for ui.shadcn.com itself — study the blocks, examples, themes, and registry implementation firsthand.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Docs Pattern</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Registry</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Themes</span>
+            </div>
+          </a>
+          <a href="https://github.com/haydenbleasel/next-forge" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">next-forge</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">6.9k ⭐</span>
+            </div>
+            <p class="text-sm text-muted-foreground">Production-grade Turborepo monorepo — 6 deployable apps, 16+ integrated packages. One command sets up everything.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Monorepo</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">SaaS</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Production</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold">Curated Lists &amp; Directories</h2>
+        <p class="text-muted-foreground">Meta-collections — browse these to discover even more libraries, templates, and registries.</p>
+        <div class="grid gap-4">
+          <a href="https://github.com/birobirobiro/awesome-shadcn-ui" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">awesome-shadcn-ui</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">github.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">The definitive curated list of awesome things related to shadcn/ui — dozens of community components, registries, tools, and projects.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Curated List</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Community</span>
+            </div>
+          </a>
+          <a href="https://registry.directory" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">registry.directory</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">registry.directory</span>
+            </div>
+            <p class="text-sm text-muted-foreground">The explorer for shadcn/ui registries — browse and discover all available component registries in one place.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Registry Explorer</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Directory</span>
+            </div>
+          </a>
+          <a href="https://shadcntemplates.com" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">shadcntemplates.com</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">shadcntemplates.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">A directory of shadcn UI templates, components, blocks, boilerplates and more — accepts open source and free submissions.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Templates</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">Directory</span>
+            </div>
+          </a>
+          <a href="https://shadcnstudio.com" target="_blank" rel="noopener" class="group block border rounded-lg p-5 bg-card hover:border-primary/50 transition-colors">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">Shadcn Studio</h3>
+              <span class="text-xs font-mono bg-muted px-2 py-0.5 rounded">shadcnstudio.com</span>
+            </div>
+            <p class="text-sm text-muted-foreground">1,000+ components, blocks, UI kits, boilerplates, templates, and themes with AI tools to accelerate development.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">1,000+ Components</span>
+              <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-md">AI Tools</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  `,
+}
+
+// ============================================
 // Component Pages - Import from batch files
 // ============================================
 
