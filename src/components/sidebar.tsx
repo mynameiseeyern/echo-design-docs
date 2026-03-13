@@ -38,7 +38,7 @@ const navSections: NavSection[] = [
     items: [
       { title: "Typography", href: "/docs/typography" },
       { title: "Colors", href: "/docs/colors" },
-      { title: "Spacing", href: "/docs/spacing" },
+      { title: "Spacing & Layout", href: "/docs/spacing" },
       { title: "Icons", href: "/docs/icons" },
     ],
   },

@@ -7,7 +7,10 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-2">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
           <Link href="/" className="flex items-center gap-2.5 font-bold text-lg">
             {/* Echo logo — soundwave bars */}
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -38,10 +41,13 @@ export function Header() {
               {/* Medium bar */}
               <rect x="25" y="7" width="4.5" height="18" rx="2.25" fill="url(#echo-grad-3)" />
             </svg>
+<<<<<<< Updated upstream
 =======
           <Link href="/" className="flex items-center gap-2 font-bold text-lg">
             <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500" />
 >>>>>>> origin/main
+=======
+>>>>>>> Stashed changes
             <span className="hidden sm:inline">Echo</span>
           </Link>
         </div>

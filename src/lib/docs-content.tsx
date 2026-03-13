@@ -1,6 +1,10 @@
 "use client"
 
 import React from "react"
+<<<<<<< Updated upstream
+=======
+import { SpacingLayoutGuide } from "./spacing-layout-guide"
+>>>>>>> Stashed changes
 
 export interface DocContent {
   title: string
@@ -383,6 +387,7 @@ componentDocsMap["colors"] = {
 }
 
 componentDocsMap["spacing"] = {
+<<<<<<< Updated upstream
   title: "Spacing",
   description: "Spacing scale and layout utilities",
   html: `
@@ -406,6 +411,12 @@ componentDocsMap["spacing"] = {
       </section>
     </div>
   `,
+=======
+  title: "Spacing & Layout",
+  description: "Spacing scale, border radius, and layout patterns with annotated examples for building consistent Echo interfaces.",
+  html: "",
+  component: <SpacingLayoutGuide />,
+>>>>>>> Stashed changes
 }
 
 componentDocsMap["icons"] = {
