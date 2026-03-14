@@ -27,7 +27,7 @@ componentDocsMap["introduction"] = {
         </p>
       </section>
 
-      <section class="space-y-4">
+      <section id="what-echo-does" class="space-y-4">
         <h2 class="text-2xl font-semibold">What Echo does</h2>
         <p class="text-base text-muted-foreground">
           Contact centres typically review only 1–3% of calls manually. Echo closes that gap by automatically scoring every interaction against defined SOPs, surfacing compliance risks, identifying training gaps, and giving leaders the visibility they need to act — not guess.
@@ -52,7 +52,7 @@ componentDocsMap["introduction"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="core-product-pillars" class="space-y-4">
         <h2 class="text-2xl font-semibold">Core product pillars</h2>
         <p class="text-sm text-muted-foreground mb-2">Every component in this system supports one or more of these pillars.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -87,7 +87,7 @@ componentDocsMap["introduction"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="key-ui-surfaces" class="space-y-4">
         <h2 class="text-2xl font-semibold">Key UI surfaces</h2>
         <p class="text-sm text-muted-foreground mb-2">These are the primary screens that make up Echo. Each combines multiple components from this system.</p>
         <div class="space-y-3">
@@ -129,7 +129,7 @@ componentDocsMap["introduction"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="design-system-foundations" class="space-y-4">
         <h2 class="text-2xl font-semibold">Design system foundations</h2>
         <ul class="space-y-2 text-base">
           <li class="flex gap-3"><span class="text-primary font-bold">•</span> <span>Built on Tailwind CSS and shadcn/ui with Radix UI primitives</span></li>
@@ -154,7 +154,7 @@ componentDocsMap["principles"] = {
         </p>
       </section>
 
-      <section class="space-y-6">
+      <section id="principles-details" class="space-y-6">
         <div class="space-y-3">
           <h2 class="text-2xl font-semibold">Clarity over decoration</h2>
           <p class="text-base text-muted-foreground">
@@ -219,14 +219,14 @@ componentDocsMap["getting-started"] = {
   description: "How to use the Echo Design System",
   html: `
     <div class="space-y-8">
-      <section class="space-y-4">
+      <section id="installation" class="space-y-4">
         <h2 class="text-2xl font-semibold">Installation</h2>
         <pre class="bg-muted rounded-lg p-4 overflow-x-auto"><code class="text-sm">npm install @radix-ui/react-slot @radix-ui/react-tabs @radix-ui/react-tooltip
 npm install class-variance-authority clsx tailwind-merge
 npm install lucide-react</code></pre>
       </section>
 
-      <section class="space-y-4">
+      <section id="setup-tailwind-css" class="space-y-4">
         <h2 class="text-2xl font-semibold">Setup Tailwind CSS</h2>
         <p class="text-base text-muted-foreground mb-4">
           Configure Tailwind CSS with CSS variables for theming support.
@@ -241,7 +241,7 @@ npm install lucide-react</code></pre>
 }</code></pre>
       </section>
 
-      <section class="space-y-4">
+      <section id="using-components" class="space-y-4">
         <h2 class="text-2xl font-semibold">Using Components</h2>
         <p class="text-base text-muted-foreground mb-4">
           Import and use components in Echo.
@@ -261,7 +261,7 @@ componentDocsMap["typography"] = {
   description: "Font families, type scale, numeric display rules, and text styling guidelines.",
   html: `
     <div class="space-y-12">
-      <section class="space-y-4">
+      <section id="font-families" class="space-y-4">
         <h2 class="text-2xl font-semibold">Font Families</h2>
         <p class="text-base text-muted-foreground mb-6">
           Echo uses two font families: <strong>Geist Sans</strong> as the primary typeface for all UI text, and <strong>Geist Mono</strong> as the monospaced typeface reserved for numeric values, code, and technical content.
@@ -282,7 +282,7 @@ componentDocsMap["typography"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="numeric-typography-rule" class="space-y-4">
         <h2 class="text-2xl font-semibold">Numeric Typography Rule</h2>
         <div class="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg">
           <p class="text-sm font-semibold text-foreground">All numbers must use Geist Mono (<code class="text-xs bg-muted px-1.5 py-0.5 rounded">font-mono</code>)</p>
@@ -301,7 +301,7 @@ componentDocsMap["typography"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="font-scale" class="space-y-4">
         <h2 class="text-2xl font-semibold">Font Scale</h2>
         <p class="text-base text-muted-foreground mb-6">Echo uses a carefully curated type scale to maintain visual hierarchy and readability.</p>
         <div class="space-y-4">
@@ -317,7 +317,7 @@ componentDocsMap["typography"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="font-weights" class="space-y-4">
         <h2 class="text-2xl font-semibold">Font Weights</h2>
         <div class="space-y-3">
           <div class="flex items-baseline gap-4 border-b pb-2"><span class="text-xs text-muted-foreground w-24 font-mono">normal (400)</span><span class="text-lg font-normal">The quick brown fox jumps over the lazy dog</span></div>
@@ -335,7 +335,7 @@ componentDocsMap["colors"] = {
   description: "Echo brand palette, semantic tokens, and chart color scale.",
   html: `
     <div class="space-y-12">
-      <section class="space-y-4">
+      <section id="echo-brand-palette" class="space-y-4">
         <h2 class="text-2xl font-semibold">Echo Brand Palette</h2>
         <p class="text-base text-muted-foreground mb-6">
           The Echo brand uses a purple color scale from echo.50 (lightest) to echo.950 (darkest). The primary brand color is <strong>echo.600</strong> (#6a47f0).
@@ -355,7 +355,7 @@ componentDocsMap["colors"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="semantic-tokens" class="space-y-4">
         <h2 class="text-2xl font-semibold">Semantic Tokens</h2>
         <p class="text-base text-muted-foreground mb-4">Semantic tokens adapt automatically between light and dark modes.</p>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -368,7 +368,7 @@ componentDocsMap["colors"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="chart-colors" class="space-y-4">
         <h2 class="text-2xl font-semibold">Chart Colors</h2>
         <p class="text-sm text-muted-foreground mb-3">Charts use 5 sequential shades from the Echo palette:</p>
         <div class="grid grid-cols-5 gap-3">
@@ -396,14 +396,14 @@ componentDocsMap["icons"] = {
   description: "Using Lucide React icons",
   html: `
     <div class="space-y-8">
-      <section class="space-y-4">
+      <section id="lucide-react" class="space-y-4">
         <h2 class="text-2xl font-semibold">Lucide React</h2>
         <p class="text-base text-muted-foreground mb-4">
           Echo uses Lucide React, a beautiful set of open-source icons. Browse the full library at lucide.dev.
         </p>
       </section>
 
-      <section class="space-y-4">
+      <section id="usage" class="space-y-4">
         <h2 class="text-2xl font-semibold">Usage</h2>
         <pre class="bg-muted rounded-lg p-4 overflow-x-auto"><code class="text-sm">import { Check, X, AlertCircle } from "lucide-react"
 
@@ -418,7 +418,7 @@ export function MyComponent() {
 }</code></pre>
       </section>
 
-      <section class="space-y-4">
+      <section id="sizing" class="space-y-4">
         <h2 class="text-2xl font-semibold">Sizing</h2>
         <div class="space-y-2 text-sm">
           <div class="flex items-center gap-4"><span class="font-semibold min-w-24">h-4 w-4</span> <span>Button icons, inline</span></div>
@@ -438,25 +438,25 @@ export function MyComponent() {
 componentDocsMap["sign-in-pattern"] = {
   title: "Sign In",
   description: "Authentication page pattern using Echo brand identity with email-based login flow.",
-  html: `<div class="space-y-12"><section class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Sign In pattern provides a branded authentication entry point for the Echo platform. It combines the Echo logo with a clean, centered login form against decorative brand elements.</p></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Anatomy</h2><div class="space-y-3"><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Brand Logo</div><div class="text-sm text-muted-foreground">Echo wordmark positioned top-left</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Card Container</div><div class="text-sm text-muted-foreground">Centered card with the sign-in form</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Email Input</div><div class="text-sm text-muted-foreground">Primary input with label and placeholder</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Continue Button</div><div class="text-sm text-muted-foreground">Full-width primary button</div></div></div></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Input</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Label</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Button</span></div></section></div>`,
+  html: `<div class="space-y-12"><section id="sign-in-overview" class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Sign In pattern provides a branded authentication entry point for the Echo platform. It combines the Echo logo with a clean, centered login form against decorative brand elements.</p></section><section id="sign-in-anatomy" class="space-y-4"><h2 class="text-2xl font-semibold">Anatomy</h2><div class="space-y-3"><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Brand Logo</div><div class="text-sm text-muted-foreground">Echo wordmark positioned top-left</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Card Container</div><div class="text-sm text-muted-foreground">Centered card with the sign-in form</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Email Input</div><div class="text-sm text-muted-foreground">Primary input with label and placeholder</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Continue Button</div><div class="text-sm text-muted-foreground">Full-width primary button</div></div></div></section><section id="sign-in-components-used" class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Input</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Label</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Button</span></div></section></div>`,
 }
 
 componentDocsMap["dashboard-overview-pattern"] = {
   title: "Dashboard Overview",
   description: "Primary dashboard layout with sidebar navigation, KPI metric cards, line charts, and scorecard widgets.",
-  html: `<div class="space-y-12"><section class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Dashboard Overview is the primary landing screen after authentication. It presents a high-level summary of operational metrics using KPI cards, trend line charts, and scorecard widgets.</p></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Anatomy</h2><div class="space-y-3"><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Sidebar</div><div class="text-sm text-muted-foreground">Collapsible navigation with Echo branding</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">KPI Cards Row</div><div class="text-sm text-muted-foreground">3-column grid of metric cards with value, label, and % change</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Line Chart</div><div class="text-sm text-muted-foreground">Time-series chart with echo brand colors</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Scorecard Grid</div><div class="text-sm text-muted-foreground">2-column grid of scorecard cards with gauge charts</div></div></div></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Sidebar</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Chart</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Badge</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Avatar</span></div></section></div>`,
+  html: `<div class="space-y-12"><section id="dashboard-overview-overview" class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Dashboard Overview is the primary landing screen after authentication. It presents a high-level summary of operational metrics using KPI cards, trend line charts, and scorecard widgets.</p></section><section id="dashboard-overview-anatomy" class="space-y-4"><h2 class="text-2xl font-semibold">Anatomy</h2><div class="space-y-3"><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Sidebar</div><div class="text-sm text-muted-foreground">Collapsible navigation with Echo branding</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">KPI Cards Row</div><div class="text-sm text-muted-foreground">3-column grid of metric cards with value, label, and % change</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Line Chart</div><div class="text-sm text-muted-foreground">Time-series chart with echo brand colors</div></div><div class="flex gap-4"><div class="font-mono text-sm font-semibold text-primary min-w-40">Scorecard Grid</div><div class="text-sm text-muted-foreground">2-column grid of scorecard cards with gauge charts</div></div></div></section><section id="dashboard-overview-components-used" class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Sidebar</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Card</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Chart</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Badge</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Avatar</span></div></section></div>`,
 }
 
 componentDocsMap["queues-table-pattern"] = {
   title: "Queues Table",
   description: "Data table pattern with color-coded score badges, pagination, and filter panels.",
-  html: `<div class="space-y-12"><section class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Queues Table pattern displays operational queue data in a structured table format with color-coded score badges, expandable filter panels, breadcrumb navigation, and pagination controls.</p></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Score Badge System</h2><p class="text-sm text-muted-foreground mb-3">Scores use a three-tier color system:</p><div class="grid grid-cols-3 gap-4"><div class="border rounded-lg p-4 bg-card text-center"><div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 mb-2">Good: 87</div><p class="text-xs text-muted-foreground">Score ≥ 67</p></div><div class="border rounded-lg p-4 bg-card text-center"><div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 mb-2">Fair: 52</div><p class="text-xs text-muted-foreground">Score 34–66</p></div><div class="border rounded-lg p-4 bg-card text-center"><div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 mb-2">Low: 21</div><p class="text-xs text-muted-foreground">Score 0–33</p></div></div></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Data Table</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Badge</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Tabs</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Pagination</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Checkbox</span></div></section></div>`,
+  html: `<div class="space-y-12"><section id="queues-table-overview" class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Queues Table pattern displays operational queue data in a structured table format with color-coded score badges, expandable filter panels, breadcrumb navigation, and pagination controls.</p></section><section id="queues-table-score-badge-system" class="space-y-4"><h2 class="text-2xl font-semibold">Score Badge System</h2><p class="text-sm text-muted-foreground mb-3">Scores use a three-tier color system:</p><div class="grid grid-cols-3 gap-4"><div class="border rounded-lg p-4 bg-card text-center"><div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 mb-2">Good: 87</div><p class="text-xs text-muted-foreground">Score ≥ 67</p></div><div class="border rounded-lg p-4 bg-card text-center"><div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 mb-2">Fair: 52</div><p class="text-xs text-muted-foreground">Score 34–66</p></div><div class="border rounded-lg p-4 bg-card text-center"><div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 mb-2">Low: 21</div><p class="text-xs text-muted-foreground">Score 0–33</p></div></div></section><section id="queues-table-components-used" class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Data Table</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Badge</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Tabs</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Pagination</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Checkbox</span></div></section></div>`,
 }
 
 componentDocsMap["queues-chart-pattern"] = {
   title: "Queues Chart",
   description: "Chart visualization pattern with line charts, tab navigation, and collapsible filter panels.",
-  html: `<div class="space-y-12"><section class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Queues Chart pattern provides a visual representation of queue performance data over time with multi-series line charts, a Chart/Table toggle, and collapsible filter panels.</p></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Chart Color Tokens</h2><div class="grid grid-cols-5 gap-3"><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #c3b3ff;"></div><p class="text-xs font-mono text-muted-foreground">--chart-1</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #7f5aff;"></div><p class="text-xs font-mono text-muted-foreground">--chart-2</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #6a47f0;"></div><p class="text-xs font-mono text-muted-foreground">--chart-3</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #5433d0;"></div><p class="text-xs font-mono text-muted-foreground">--chart-4</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #4125aa;"></div><p class="text-xs font-mono text-muted-foreground">--chart-5</p></div></div></section><section class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Chart</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Tabs</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Checkbox</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Collapsible</span></div></section></div>`,
+  html: `<div class="space-y-12"><section id="queues-chart-overview" class="space-y-4"><h2 class="text-2xl font-semibold">Overview</h2><p class="text-base leading-relaxed text-muted-foreground">The Queues Chart pattern provides a visual representation of queue performance data over time with multi-series line charts, a Chart/Table toggle, and collapsible filter panels.</p></section><section id="queues-chart-color-tokens" class="space-y-4"><h2 class="text-2xl font-semibold">Chart Color Tokens</h2><div class="grid grid-cols-5 gap-3"><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #c3b3ff;"></div><p class="text-xs font-mono text-muted-foreground">--chart-1</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #7f5aff;"></div><p class="text-xs font-mono text-muted-foreground">--chart-2</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #6a47f0;"></div><p class="text-xs font-mono text-muted-foreground">--chart-3</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #5433d0;"></div><p class="text-xs font-mono text-muted-foreground">--chart-4</p></div><div class="text-center"><div class="w-full h-8 rounded-md mb-1" style="background-color: #4125aa;"></div><p class="text-xs font-mono text-muted-foreground">--chart-5</p></div></div></section><section id="queues-chart-components-used" class="space-y-4"><h2 class="text-2xl font-semibold">Components Used</h2><div class="flex flex-wrap gap-2"><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Chart</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Tabs</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Checkbox</span><span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Collapsible</span></div></section></div>`,
 }
 
 // ============================================
@@ -469,7 +469,7 @@ componentDocsMap["inspiration"] = {
   html: `
     <div class="space-y-12">
 
-      <section class="space-y-4">
+      <section id="official" class="space-y-4">
         <h2 class="text-2xl font-semibold">Official</h2>
         <p class="text-muted-foreground">The canonical source for shadcn/ui components and blocks.</p>
         <div class="grid gap-4">
@@ -499,7 +499,7 @@ componentDocsMap["inspiration"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="block-libraries" class="space-y-4">
         <h2 class="text-2xl font-semibold">Block Libraries</h2>
         <p class="text-muted-foreground">Pre-built page sections — hero areas, pricing cards, auth forms, dashboards — ready to drop in.</p>
         <div class="grid gap-4">
@@ -554,7 +554,7 @@ componentDocsMap["inspiration"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="animation-effects-libraries" class="space-y-4">
         <h2 class="text-2xl font-semibold">Animation &amp; Effects Libraries</h2>
         <p class="text-muted-foreground">Component libraries that pair with shadcn/ui to add motion, transitions, and visual polish.</p>
         <div class="grid gap-4">
@@ -596,7 +596,7 @@ componentDocsMap["inspiration"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="starter-kits-dashboards" class="space-y-4">
         <h2 class="text-2xl font-semibold">Starter Kits &amp; Dashboards</h2>
         <p class="text-muted-foreground">Production-ready starters that demonstrate real-world shadcn/ui patterns at scale.</p>
         <div class="grid gap-4">
@@ -639,7 +639,7 @@ componentDocsMap["inspiration"] = {
         </div>
       </section>
 
-      <section class="space-y-4">
+      <section id="curated-lists-directories" class="space-y-4">
         <h2 class="text-2xl font-semibold">Curated Lists &amp; Directories</h2>
         <p class="text-muted-foreground">Meta-collections — browse these to discover even more libraries, templates, and registries.</p>
         <div class="grid gap-4">

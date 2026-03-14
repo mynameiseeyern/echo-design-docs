@@ -12,7 +12,7 @@ batch3["label"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="label-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <div class="space-y-4">
@@ -135,7 +135,7 @@ batch3["menubar"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="menubar-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <div class="border-b border-gray-200">
@@ -285,7 +285,7 @@ batch3["navigation-menu"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="navigation-menu-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <nav class="border-b border-gray-200">
@@ -416,7 +416,7 @@ batch3["pagination"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="pagination-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <div class="flex items-center justify-center gap-2">
@@ -560,7 +560,7 @@ batch3["radio-group"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="radio-group-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <div class="space-y-4">
@@ -701,7 +701,7 @@ batch3["resizable"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="resizable-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <div class="flex gap-0 h-64 border border-gray-300 rounded">
@@ -820,7 +820,7 @@ batch3["select"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="select-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <div class="space-y-4">
@@ -962,7 +962,7 @@ batch3["separator"] = {
   html: `
     <div class="space-y-8 p-8 bg-white">
       <!-- Preview Section -->
-      <section>
+      <section id="separator-preview">
         <h2 class="text-2xl font-bold mb-6 text-gray-900">Preview</h2>
         <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
           <div class="space-y-6">
