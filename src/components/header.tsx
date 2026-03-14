@@ -37,13 +37,6 @@ export function Header() {
               {/* Medium bar */}
               <rect x="25" y="7" width="4.5" height="18" rx="2.25" fill="url(#echo-grad-3)" />
             </svg>
-<<<<<<< Updated upstream
-=======
-          <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-            <div className="h-7 w-7 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500" />
->>>>>>> origin/main
-=======
->>>>>>> Stashed changes
             <span className="hidden sm:inline">Echo</span>
           </Link>
         </div>
