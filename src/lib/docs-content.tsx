@@ -384,34 +384,12 @@ componentDocsMap["colors"] = {
 }
 
 componentDocsMap["spacing"] = {
-  title: "Spacing",
-  description: "Spacing scale and layout utilities",
-  html: `
-    <div class="space-y-8">
-      <section class="space-y-4">
-        <h2 class="text-2xl font-semibold">Spacing Scale</h2>
-        <p class="text-base text-muted-foreground mb-6">Echo uses an 8px-based spacing scale for consistent alignment and layout.</p>
-        <div class="space-y-4">
-          <div class="flex items-center gap-4"><div class="w-8 h-8 bg-primary rounded"></div><div class="text-sm"><span class="font-semibold">8px</span> - Base unit (p-2)</div></div>
-          <div class="flex items-center gap-4"><div class="w-12 h-8 bg-primary rounded"></div><div class="text-sm"><span class="font-semibold">16px</span> - Component padding (p-4)</div></div>
-          <div class="flex items-center gap-4"><div class="w-20 h-8 bg-primary rounded"></div><div class="text-sm"><span class="font-semibold">24px</span> - Section spacing (p-6)</div></div>
-          <div class="flex items-center gap-4"><div class="w-32 h-8 bg-primary rounded"></div><div class="text-sm"><span class="font-semibold">32px</span> - Large spacing (p-8)</div></div>
-        </div>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-2xl font-semibold">Application</h2>
-        <pre class="bg-muted rounded-lg p-4 overflow-x-auto"><code class="text-sm">&lt;div class="p-4"&gt;&lt;/div&gt;  {/* padding: 16px */}
-&lt;div class="m-6"&gt;&lt;/div&gt;  {/* margin: 24px */}
-&lt;div class="gap-4"&gt;&lt;/div&gt; {/* gap: 16px */}</code></pre>
-      </section>
-    </div>
-  `,
-  title: "Spacing & Layout",
-  description: "Spacing scale, border radius, and layout patterns with annotated examples for building consistent Echo interfaces.",
-  html: "",
-  component: <SpacingLayoutGuide />,
+    title: "Spacing & Layout",
+    description: "Spacing scale, border radius, and layout patterns with annotated examples for building consistent Echo interfaces.",
+    html: "",
+    component: <SpacingLayoutGuide />,
 }
+  
 
 componentDocsMap["icons"] = {
   title: "Icons",
