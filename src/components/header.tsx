@@ -1,12 +1,16 @@
 import Link from "next/link"
 import { Search } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
+import { MobileNav } from "./mobile-nav"
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center justify-between px-6">
+      <div className="flex h-14 sm:h-16 items-center justify-between px-4 sm:px-6">
         <div className="flex items-center gap-2">
+          {/* Mobile hamburger menu */}
+          <MobileNav />
+
           <Link href="/" className="flex items-center gap-2.5 font-bold text-lg">
             {/* Echo logo — soundwave bars */}
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -41,7 +45,7 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-4 ml-auto">
+        <div className="flex items-center gap-2 sm:gap-4 ml-auto">
           {/* Search */}
           <div className="hidden md:flex items-center gap-2 bg-muted rounded-md px-3 py-2 text-sm text-muted-foreground">
             <Search className="h-4 w-4" />

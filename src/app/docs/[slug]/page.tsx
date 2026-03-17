@@ -76,13 +76,13 @@ export default function DocPage() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="flex-1 min-w-0 space-y-8"
+        className="flex-1 min-w-0 space-y-6 sm:space-y-8"
       >
         <div>
-          <h1 className="text-4xl font-bold tracking-tight mb-2">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-2">
             {content.title}
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             {content.description}
           </p>
         </div>

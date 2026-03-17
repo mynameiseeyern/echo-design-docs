@@ -233,9 +233,33 @@ code {
 }
 
 pre {
-  @apply bg-muted rounded-lg p-4 overflow-x-auto;
+  @apply bg-muted rounded-lg p-3 sm:p-4 overflow-x-auto text-xs sm:text-sm;
 }
 
 pre code {
   @apply bg-transparent;
+}
+
+/* Mobile responsive fixes for doc content */
+@media (max-width: 640px) {
+  /* Prevent horizontal overflow from tables, code blocks, previews */
+  .min-w-0 table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Scale down grid layouts on mobile */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .grid-cols-5 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Responsive preview containers */
+  .flex.gap-4 > .flex-1,
+  .flex.gap-6 > .flex-1 {
+    min-width: 0;
+  }
 }
