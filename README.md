@@ -1,16 +1,19 @@
 # Echo Design System Documentation
 
-A comprehensive, modern design system documentation site built with Next.js, Tailwind CSS, and shadcn/ui components.
+A comprehensive design system documentation site for **Echo**, an AI-powered Interaction Intelligence Platform for contact centres. Built with Next.js 16, Tailwind CSS v4, and shadcn/ui components.
+
+**Live site**: Deployed on Vercel from `main` branch.
 
 ## Features
 
-- **Complete Component Library**: Full documentation for 40+ UI components
-- **Live Component Previews**: Interactive examples for each component
-- **Responsive Design**: Mobile-friendly layout with sidebar navigation
-- **Accessible Components**: WCAG 2.1 AA compliant with proper ARIA attributes
-- **Dark Mode Support**: Built-in light and dark theme support
-- **Fast Performance**: Built on Next.js 16 with Turbopack for instant builds
-- **Type Safe**: Full TypeScript support throughout
+- **57 Documentation Pages**: Foundations, 40+ components, patterns, and resources — all fully documented
+- **Live Component Previews**: Interactive examples with copy-pasteable code for every component
+- **Dynamic Search**: Instant search across all pages with keyboard navigation (Cmd+K / Ctrl+K)
+- **Responsive Design**: Mobile-friendly with hamburger nav drawer, fullscreen mobile search, and adaptive layouts
+- **Dark Mode**: Light and dark themes with Echo brand tokens
+- **Table of Contents**: Auto-generated sticky TOC sidebar with scroll-aware highlighting
+- **Accessible**: WCAG 2.1 AA compliant with proper ARIA attributes and keyboard support
+- **Type Safe**: Full TypeScript throughout
 
 ## Project Structure
 
@@ -18,30 +21,31 @@ A comprehensive, modern design system documentation site built with Next.js, Tai
 src/
 ├── app/
 │   ├── docs/
-│   │   ├── [slug]/
-│   │   │   └── page.tsx          # Dynamic documentation pages
-│   │   └── layout.tsx             # Docs layout with sidebar
-│   ├── layout.tsx                 # Root layout
-│   ├── page.tsx                   # Home page (redirects to introduction)
-│   └── globals.css                # Global styles & CSS variables
+│   │   ├── [slug]/page.tsx            # Dynamic doc pages with TOC
+│   │   └── layout.tsx                 # Docs layout (header + sidebar + content)
+│   ├── layout.tsx                     # Root layout with theme provider
+│   ├── page.tsx                       # Home (redirects to /docs/introduction)
+│   └── globals.css                    # Echo design tokens & global styles
 ├── components/
-│   ├── ui/                        # shadcn UI components
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── badge.tsx
-│   │   ├── input.tsx
-│   │   ├── label.tsx
-│   │   ├── tabs.tsx
-│   │   ├── scroll-area.tsx
-│   │   ├── tooltip.tsx
-│   │   ├── checkbox.tsx
-│   │   └── switch.tsx
-│   ├── code-block.tsx             # Code example component
-│   ├── header.tsx                 # Site header
-│   └── sidebar.tsx                # Navigation sidebar
+│   ├── ui/                            # 30 shadcn/Radix UI primitives
+│   ├── doc-components.tsx             # Shared doc building blocks (ContentSection, ExampleBlock, DosDonts, PropsTable)
+│   ├── header.tsx                     # Sticky header with logo, search, links
+│   ├── sidebar.tsx                    # Collapsible nav sidebar (categorised)
+│   ├── mobile-nav.tsx                 # Sheet-based mobile navigation drawer
+│   ├── search.tsx                     # Inline search input + mobile fullscreen search
+│   ├── table-of-contents.tsx          # Sticky TOC with IntersectionObserver
+│   ├── code-block.tsx                 # Syntax-highlighted code examples
+│   ├── theme-provider.tsx             # next-themes provider
+│   └── theme-toggle.tsx               # Light/dark mode toggle
 └── lib/
-    ├── utils.ts                   # cn() utility function
-    └── docs-content.tsx           # Documentation content
+    ├── docs-content.tsx               # Foundation & pattern page content + merge logic
+    ├── component-docs-batch1.tsx      # Components: button, badge, card, checkbox, input, switch, tabs, tooltip, dialog, alert
+    ├── component-docs-batch2.tsx      # Components: accordion, avatar, collapsible, select, slider, toggle, toggle-group, radio-group, separator, progress
+    ├── component-docs-batch3.tsx      # Components: sheet, dropdown-menu, context-menu, hover-card, alert-dialog, popover, skeleton, textarea, label, scroll-area
+    ├── component-docs-batch4.tsx      # Components: button-group, carousel, chart, data-table, date-picker, drawer, empty, field, input-group, input-otp, keyboard-shortcuts, navigation-menu + more
+    ├── spacing-layout-guide.tsx       # Interactive spacing & layout guide
+    ├── search-data.ts                 # Search index (titles, descriptions, categories)
+    └── utils.ts                       # cn() utility
 ```
 
 ## Getting Started
@@ -73,156 +77,76 @@ npm start
 
 ## Documentation Pages
 
-### Foundation Pages
+### Getting Started
+Introduction, Design Principles, Getting Started guide
 
-- **Introduction**: Overview of the Echo Design System
-- **Principles**: Design principles (Consistency, Accessibility, Simplicity, Scalability)
-- **Getting Started**: Installation and setup instructions
-- **Typography**: Text styles and font scale (xs through 9xl)
-- **Colors**: Color palette with semantic tokens
-- **Spacing**: 8px-based spacing scale
-- **Icons**: Lucide React icon usage guide
+### Foundations
+Typography, Colors, Spacing & Layout, Icons
 
-### Documented Components
+### Components (40+)
 
-**Fully Documented:**
-1. **Button** - Click element with variants (default, secondary, outline, ghost, link, destructive) and sizes (sm, default, lg, icon)
-2. **Input** - Text input field with label and error states
-3. **Badge** - Small colored label for categorization
-4. **Card** - Container for grouping content (with Header, Content, Footer)
-5. **Dialog** - Modal overlay for important information
-6. **Avatar** - User image representation
-7. **Tabs** - Organize content into sections
-8. **Checkbox** - Multiple selection control
-9. **Switch** - Boolean toggle control
-10. **Tooltip** - Small context popup
-11. **Scroll Area** - Styleable scrollbar container
-12. **Select** - Dropdown selection component
+| Category | Components |
+|----------|-----------|
+| **Forms & Input** | Button, Button Group, Checkbox, Input, Input Group, Input OTP, Field, Label, Radio Group, Select, Slider, Switch, Textarea, Toggle, Toggle Group, Date Picker |
+| **Navigation** | Menubar, Navigation Menu, Pagination, Tabs, Sidebar |
+| **Feedback** | Alert, Sonner, Spinner, Skeleton, Empty |
+| **Overlay** | Dialog, Alert Dialog, Drawer, Dropdown Menu, Context Menu, Hover Card, Popover, Sheet, Tooltip |
+| **Data Display** | Accordion, Avatar, Badge, Card, Carousel, Chart, Collapsible, Data Table, Separator, Scroll Area, Progress |
+| **Utility** | Keyboard Shortcuts, Resizable |
 
-**Placeholder Documentation** (33 components coming soon):
-- Accordion, Alert, Avatar, Button Group, Carousel, Chart, Collapsible, Context Menu, Data Table, Date Picker, Drawer, Dropdown Menu, Empty, Field, Hover Card, Input Group, Input OTP, Keyboard Shortcuts, Menubar, Navigation Menu, Pagination, Radio Group, Resizable, Separator, Sheet, Sidebar, Skeleton, Slider, Sonner, Spinner, Textarea, Toggle, Toggle Group, Label
+### Patterns
+Sign In, Dashboard Overview, Queues Table, Queues Chart
+
+### Resources
+Inspiration (curated shadcn/ui kits and block libraries)
 
 ## Component Documentation Structure
 
 Each component page includes:
 
-1. **Preview** - Live rendered examples
-2. **Purpose & Rationale** - Why and when to use the component
-3. **Anatomy** - Component parts and their purpose
-4. **Variants** - Different styles and configurations
-5. **Do's and Don'ts** - Best practices with visual indicators
-6. **Code Examples** - Copy-pasteable implementation code
-7. **Accessibility** - ARIA attributes and keyboard support
-8. **Content Guidelines** - Text, tone, and styling recommendations
+1. **Live Preview** — Interactive rendered examples
+2. **Code Examples** — Copy-pasteable implementation code
+3. **Usage Guidelines** — Do's and Don'ts with visual indicators
+4. **Echo Usage** — How the component is used in Echo's product context
+5. **Accessibility** — ARIA attributes and keyboard support
+6. **API Reference** — Props table with types and defaults
 
-## Technology Stack
+## Design Tokens
 
-- **Framework**: Next.js 16.1.6
-- **UI Library**: React 19.2.3
-- **Styling**: Tailwind CSS 4
-- **Component Primitives**: Radix UI
-- **Icons**: Lucide React
-- **Utilities**: clsx, tailwind-merge, class-variance-authority
+The Echo brand uses a purple-to-cyan gradient identity with `#6a47f0` as the primary color.
 
-## Radix UI Dependencies
-
-- @radix-ui/react-slot
-- @radix-ui/react-tabs
-- @radix-ui/react-tooltip
-- @radix-ui/react-scroll-area
-- @radix-ui/react-label
-- @radix-ui/react-switch
-- @radix-ui/react-checkbox
-
-## Design System Features
-
-### CSS Variables
-
-The design system uses CSS variables for theming:
-
-```css
---primary: 280 60% 50%
---secondary: 200 90% 56%
---destructive: 0 84.2% 60.2%
---muted: 0 0% 96.1%
---accent: 280 60% 50%
-```
-
-### Responsive Layout
-
-- **Mobile**: Single column layout (hidden sidebar)
-- **Tablet & Desktop**: Two-column layout with 256px sidebar
-- **Content Width**: Max 896px for readability
-
-### Dark Mode
-
-Automatic dark mode support via CSS variables and `prefers-color-scheme` media query.
-
-## Customization
-
-### Adding New Components
-
-1. Create component in `src/components/ui/`
-2. Add documentation to `src/lib/docs-content.tsx`
-3. Component will automatically appear in sidebar navigation
-
-### Changing Colors
-
-Edit CSS variables in `src/app/globals.css`:
+### Key CSS Variables
 
 ```css
 :root {
-  --primary: 280 60% 50%;
-  --secondary: 200 90% 56%;
-  /* ... */
+  --primary: 253 85% 61%;       /* Echo purple #6a47f0 */
+  --background: 0 0% 98%;       /* Light neutral */
+  --foreground: 240 10% 4%;     /* Near-black text */
+  --muted: 240 5% 96%;          /* Subtle backgrounds */
+  --border: 240 6% 90%;         /* Soft borders */
 }
 ```
 
-### Modifying Theme
+Full token set with dark mode overrides in `src/app/globals.css`.
 
-Colors use HSL format for easy customization. Update the root CSS variables to change the entire design system theme.
+## Technology Stack
 
-## Accessibility
+- **Framework**: Next.js 16.1.6 (App Router)
+- **UI**: React 19.2.3
+- **Styling**: Tailwind CSS v4
+- **Component Primitives**: Radix UI (25 packages)
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Geist Sans & Geist Mono
+- **Theme**: next-themes
+- **Utilities**: clsx, tailwind-merge, class-variance-authority
 
-All components follow WCAG 2.1 AA guidelines:
+## Responsive Layout
 
-- Keyboard navigation support (Tab, Enter, Space, Arrow keys)
-- Proper ARIA labels and roles
-- Focus management
-- Screen reader support
-- Color contrast compliance
-- Semantic HTML
-
-## Building for Production
-
-```bash
-npm run build
-```
-
-The build creates:
-- Static pre-rendered documentation pages
-- Dynamic route handlers for component documentation
-- Optimized assets and code splitting
-
-## Browser Support
-
-- Chrome/Edge (latest 2 versions)
-- Firefox (latest 2 versions)
-- Safari (latest 2 versions)
+- **Mobile** (<1024px): Hidden sidebar, hamburger nav drawer via Sheet component, fullscreen search overlay, single-column content
+- **Desktop** (>=1024px): 288px sticky sidebar, inline search with dropdown, main content area
+- **Wide** (>=1280px): Sticky table of contents sidebar on the right
 
 ## License
 
 This design system documentation is open source and available under the MIT License.
-
-## Contributing
-
-To add or improve component documentation:
-
-1. Edit the component entry in `src/lib/docs-content.tsx`
-2. Follow the existing documentation template
-3. Test on mobile and desktop
-4. Ensure accessibility standards are met
-
-## Support
-
-For questions or issues, please refer to the documentation within the site or check the component source code in `src/components/ui/`.
