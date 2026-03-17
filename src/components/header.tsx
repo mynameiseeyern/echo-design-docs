@@ -1,7 +1,7 @@
 import Link from "next/link"
-import { Search } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { MobileNav } from "./mobile-nav"
+import { SearchInput, MobileSearchTrigger } from "./search"
 
 export function Header() {
   return (
@@ -46,16 +46,13 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 ml-auto">
-          {/* Search */}
-          <div className="hidden md:flex items-center gap-2 bg-muted rounded-md px-3 py-2 text-sm text-muted-foreground">
-            <Search className="h-4 w-4" />
-            <input
-              type="text"
-              placeholder="Search..."
-              className="bg-transparent border-0 outline-none w-40 placeholder-muted-foreground"
-              disabled
-            />
+          {/* Desktop search — inline input with dropdown */}
+          <div className="hidden md:block">
+            <SearchInput />
           </div>
+
+          {/* Mobile search — icon button that opens fullscreen overlay */}
+          <MobileSearchTrigger />
 
           {/* Links */}
           <div className="hidden sm:flex items-center gap-4">
