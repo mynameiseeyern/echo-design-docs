@@ -34,7 +34,7 @@ const ButtonGroupPreview = () => {
   const [selected, setSelected] = useState('week')
 
   return (
-    <div className="inline-flex rounded-lg border border-gray-200 bg-white p-1">
+    <div className="inline-flex rounded-lg border border-border bg-card p-1">
       {[
         { id: 'day', label: 'Day' },
         { id: 'week', label: 'Week' },
@@ -46,7 +46,7 @@ const ButtonGroupPreview = () => {
           className={`px-4 py-2 text-sm font-medium transition-all ${
             selected === btn.id
               ? 'bg-blue-600 text-white'
-              : 'text-gray-700 hover:bg-gray-50'
+              : 'text-foreground/80 hover:bg-muted/30'
           }`}
         >
           {btn.label}
@@ -72,7 +72,7 @@ const CarouselPreview = () => {
   const prev = () => setCurrent((current - 1 + slides.length) % slides.length)
 
   return (
-    <div className="relative w-full bg-white">
+    <div className="relative w-full bg-card">
       <div className="relative h-64 w-full overflow-hidden rounded-lg">
         {slides.map((slide, i) => (
           <div
@@ -92,13 +92,13 @@ const CarouselPreview = () => {
       {/* Navigation buttons */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 hover:bg-white"
+        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-card/80 p-2 hover:bg-card"
       >
         <ChevronLeft className="h-5 w-5" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 hover:bg-white"
+        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-card/80 p-2 hover:bg-card"
       >
         <ChevronRight className="h-5 w-5" />
       </button>
@@ -110,7 +110,7 @@ const CarouselPreview = () => {
             key={i}
             onClick={() => setCurrent(i)}
             className={`h-2 w-2 rounded-full transition-all ${
-              i === current ? 'w-8 bg-gray-800' : 'bg-gray-300'
+              i === current ? 'w-8 bg-foreground/90' : 'bg-muted'
             }`}
           />
         ))}
@@ -134,7 +134,7 @@ const ChartPreview = () => {
   ]
 
   return (
-    <div className="rounded-lg bg-white p-6">
+    <div className="rounded-lg bg-card p-6">
       <h3 className="mb-4 font-semibold">Monthly Performance</h3>
       <div className="flex h-64 items-end gap-3">
         {data.map((item, i) => (
@@ -147,7 +147,7 @@ const ChartPreview = () => {
             <div className="relative h-full w-full">
               <div className="absolute bottom-0 left-0 right-0 flex items-end justify-center">
                 {hoveredIndex === i && (
-                  <div className="mb-2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-white">
+                  <div className="mb-2 whitespace-nowrap rounded bg-foreground/90 px-2 py-1 text-xs text-white">
                     {item.value}
                   </div>
                 )}
@@ -159,7 +159,7 @@ const ChartPreview = () => {
                 style={{ height: `${(item.value / 100) * 100}%` }}
               />
             </div>
-            <span className="text-xs text-gray-600">{item.label}</span>
+            <span className="text-xs text-muted-foreground">{item.label}</span>
           </div>
         ))}
       </div>
@@ -202,7 +202,7 @@ const DataTablePreview = () => {
   )
 
   return (
-    <div className="w-full space-y-4 rounded-lg bg-white p-4">
+    <div className="w-full space-y-4 rounded-lg bg-card p-4">
       <Input
         placeholder="Search by name or email..."
         value={search}
@@ -218,7 +218,7 @@ const DataTablePreview = () => {
             <th className="py-2 text-left text-sm font-semibold">
               <button
                 onClick={() => setSortBy('name')}
-                className={sortBy === 'name' ? 'text-blue-600' : 'text-gray-600'}
+                className={sortBy === 'name' ? 'text-blue-600' : 'text-muted-foreground'}
               >
                 Name {sortBy === 'name' && '↓'}
               </button>
@@ -227,7 +227,7 @@ const DataTablePreview = () => {
             <th className="py-2 text-left text-sm font-semibold">
               <button
                 onClick={() => setSortBy('status')}
-                className={sortBy === 'status' ? 'text-blue-600' : 'text-gray-600'}
+                className={sortBy === 'status' ? 'text-blue-600' : 'text-muted-foreground'}
               >
                 Status {sortBy === 'status' && '↓'}
               </button>
@@ -236,9 +236,9 @@ const DataTablePreview = () => {
         </thead>
         <tbody>
           {paginatedData.map((row) => (
-            <tr key={row.id} className="border-b hover:bg-gray-50">
+            <tr key={row.id} className="border-b hover:bg-muted/30">
               <td className="py-3 text-sm">{row.name}</td>
-              <td className="py-3 text-sm text-gray-600">{row.email}</td>
+              <td className="py-3 text-sm text-muted-foreground">{row.email}</td>
               <td className="py-3 text-sm">
                 <span
                   className={`inline-block rounded-full px-2 py-1 text-xs font-medium ${
@@ -246,7 +246,7 @@ const DataTablePreview = () => {
                       ? 'bg-green-100 text-green-800'
                       : row.status === 'Pending'
                         ? 'bg-yellow-100 text-yellow-800'
-                        : 'bg-gray-100 text-gray-800'
+                        : 'bg-muted text-foreground'
                   }`}
                 >
                   {row.status}
@@ -258,7 +258,7 @@ const DataTablePreview = () => {
       </table>
 
       <div className="flex items-center justify-between">
-        <span className="text-xs text-gray-600">
+        <span className="text-xs text-muted-foreground">
           Page {currentPage} of {totalPages}
         </span>
         <div className="flex gap-2">
@@ -316,13 +316,13 @@ const DatePickerPreview = () => {
   })
 
   return (
-    <div className="inline-block rounded-lg border border-gray-200 bg-white p-4">
+    <div className="inline-block rounded-lg border border-border bg-card p-4">
       <div className="mb-4 flex items-center justify-between">
         <button
           onClick={() =>
             setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1))
           }
-          className="p-1 hover:bg-gray-100"
+          className="p-1 hover:bg-muted"
         >
           <ChevronLeft className="h-4 w-4" />
         </button>
@@ -331,7 +331,7 @@ const DatePickerPreview = () => {
           onClick={() =>
             setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1))
           }
-          className="p-1 hover:bg-gray-100"
+          className="p-1 hover:bg-muted"
         >
           <ChevronRight className="h-4 w-4" />
         </button>
@@ -339,7 +339,7 @@ const DatePickerPreview = () => {
 
       <div className="mb-4 grid grid-cols-7 gap-2">
         {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map((d) => (
-          <div key={d} className="w-8 text-center text-xs font-semibold text-gray-500">
+          <div key={d} className="w-8 text-center text-xs font-semibold text-muted-foreground">
             {d}
           </div>
         ))}
@@ -360,7 +360,7 @@ const DatePickerPreview = () => {
                 : selectedDate?.getDate() === day &&
                     selectedDate?.getMonth() === currentMonth.getMonth()
                   ? 'bg-blue-600 text-white'
-                  : 'hover:bg-gray-100'
+                  : 'hover:bg-muted'
             }`}
           >
             {day}
@@ -384,7 +384,7 @@ const DrawerPreview = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="relative h-80 w-full rounded-lg border border-gray-200 bg-gray-50">
+    <div className="relative h-80 w-full rounded-lg border border-border bg-muted/30">
       <div className="flex h-full items-center justify-center">
         <Button onClick={() => setIsOpen(true)}>Open Drawer</Button>
       </div>
@@ -396,7 +396,7 @@ const DrawerPreview = () => {
             onClick={() => setIsOpen(false)}
           />
           <div
-            className={`absolute bottom-0 left-0 right-0 rounded-t-lg bg-white transition-transform duration-300 ${
+            className={`absolute bottom-0 left-0 right-0 rounded-t-lg bg-card transition-transform duration-300 ${
               isOpen ? 'translate-y-0' : 'translate-y-full'
             }`}
             style={{
@@ -404,12 +404,12 @@ const DrawerPreview = () => {
               height: 'auto',
             }}
           >
-            <div className="border-b border-gray-200 p-4">
+            <div className="border-b border-border p-4">
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-semibold">Settings</h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-1 hover:bg-gray-100"
+                  className="p-1 hover:bg-muted"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -429,7 +429,7 @@ const DrawerPreview = () => {
                 <span className="text-sm">Analytics</span>
               </label>
             </div>
-            <div className="border-t border-gray-200 p-4">
+            <div className="border-t border-border p-4">
               <Button className="w-full" onClick={() => setIsOpen(false)}>
                 Done
               </Button>
@@ -446,12 +446,12 @@ const DrawerPreview = () => {
 // ============================================================================
 const EmptyStatePreview = () => {
   return (
-    <div className="rounded-lg bg-white p-12 text-center">
-      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
-        <AlertCircle className="h-8 w-8 text-gray-400" />
+    <div className="rounded-lg bg-card p-12 text-center">
+      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
+        <AlertCircle className="h-8 w-8 text-muted-foreground/60" />
       </div>
       <h3 className="mb-1 text-lg font-semibold">No data available</h3>
-      <p className="mb-6 text-sm text-gray-600">
+      <p className="mb-6 text-sm text-muted-foreground">
         We couldn't find any items. Try adjusting your filters.
       </p>
       <Button>Create Item</Button>
@@ -473,7 +473,7 @@ const FieldPreview = () => {
   }
 
   return (
-    <div className="max-w-sm space-y-6 rounded-lg bg-white p-6">
+    <div className="max-w-sm space-y-6 rounded-lg bg-card p-6">
       <div>
         <Label htmlFor="email" className="mb-2 block text-sm font-medium">
           Email Address
@@ -489,7 +489,7 @@ const FieldPreview = () => {
         {hasError && (
           <p className="mt-1 text-xs text-red-600">Please enter a valid email</p>
         )}
-        <p className="mt-1 text-xs text-gray-500">We'll never share your email.</p>
+        <p className="mt-1 text-xs text-muted-foreground">We'll never share your email.</p>
       </div>
 
       <div>
@@ -497,7 +497,7 @@ const FieldPreview = () => {
           Password
         </Label>
         <Input id="password" type="password" placeholder="••••••••" />
-        <p className="mt-1 text-xs text-gray-500">Minimum 8 characters</p>
+        <p className="mt-1 text-xs text-muted-foreground">Minimum 8 characters</p>
       </div>
     </div>
   )
@@ -511,11 +511,11 @@ const InputGroupPreview = () => {
   const [amount, setAmount] = useState('')
 
   return (
-    <div className="max-w-sm space-y-6 rounded-lg bg-white p-6">
+    <div className="max-w-sm space-y-6 rounded-lg bg-card p-6">
       <div>
         <Label className="mb-2 block text-sm font-medium">Website URL</Label>
-        <div className="flex rounded-lg border border-gray-200">
-          <span className="flex items-center bg-gray-50 px-4 text-sm text-gray-600">
+        <div className="flex rounded-lg border border-border">
+          <span className="flex items-center bg-muted/30 px-4 text-sm text-muted-foreground">
             https://
           </span>
           <Input
@@ -524,7 +524,7 @@ const InputGroupPreview = () => {
             placeholder="example.com"
             className="border-0"
           />
-          <span className="flex items-center bg-gray-50 px-4 text-sm text-gray-600">
+          <span className="flex items-center bg-muted/30 px-4 text-sm text-muted-foreground">
             .com
           </span>
         </div>
@@ -532,8 +532,8 @@ const InputGroupPreview = () => {
 
       <div>
         <Label className="mb-2 block text-sm font-medium">Price</Label>
-        <div className="flex rounded-lg border border-gray-200">
-          <span className="flex items-center bg-gray-50 px-4 text-sm font-medium text-gray-600">
+        <div className="flex rounded-lg border border-border">
+          <span className="flex items-center bg-muted/30 px-4 text-sm font-medium text-muted-foreground">
             $
           </span>
           <Input
@@ -543,7 +543,7 @@ const InputGroupPreview = () => {
             placeholder="0.00"
             className="border-0"
           />
-          <span className="flex items-center bg-gray-50 px-4 text-sm text-gray-600">
+          <span className="flex items-center bg-muted/30 px-4 text-sm text-muted-foreground">
             USD
           </span>
         </div>
@@ -577,7 +577,7 @@ const InputOTPPreview = () => {
   }
 
   return (
-    <div className="rounded-lg bg-white p-6">
+    <div className="rounded-lg bg-card p-6">
       <Label className="mb-6 block text-center text-sm font-medium">
         Enter verification code
       </Label>
@@ -594,11 +594,11 @@ const InputOTPPreview = () => {
             value={digit}
             onChange={(e) => handleChange(i, e.target.value)}
             onKeyDown={(e) => handleKeyDown(i, e)}
-            className="h-12 w-12 rounded-lg border border-gray-200 text-center text-lg font-semibold focus:border-blue-600 focus:outline-none"
+            className="h-12 w-12 rounded-lg border border-border text-center text-lg font-semibold focus:border-blue-600 focus:outline-none"
           />
         ))}
       </div>
-      <p className="mt-4 text-center text-sm text-gray-600">
+      <p className="mt-4 text-center text-sm text-muted-foreground">
         {otp.every((d) => d) ? 'Code verified ✓' : 'Enter the 6-digit code'}
       </p>
     </div>
@@ -619,16 +619,16 @@ const KeyboardShortcutsPreview = () => {
   ]
 
   return (
-    <div className="rounded-lg bg-white p-6">
+    <div className="rounded-lg bg-card p-6">
       <div className="grid grid-cols-2 gap-4">
         {shortcuts.map((shortcut, i) => (
           <div key={i} className="flex items-center justify-between">
-            <span className="text-sm text-gray-600">{shortcut.action}</span>
+            <span className="text-sm text-muted-foreground">{shortcut.action}</span>
             <div className="flex gap-1">
               {shortcut.keys.map((key, j) => (
                 <React.Fragment key={j}>
-                  {j > 0 && <span className="text-xs text-gray-400">+</span>}
-                  <kbd className="rounded border border-gray-300 bg-gray-50 px-2 py-1 font-mono text-xs font-semibold text-gray-700">
+                  {j > 0 && <span className="text-xs text-muted-foreground/60">+</span>}
+                  <kbd className="rounded border border-border bg-muted/30 px-2 py-1 font-mono text-xs font-semibold text-foreground/80">
                     {key}
                   </kbd>
                 </React.Fragment>
@@ -648,59 +648,59 @@ const MenubarPreview = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null)
 
   return (
-    <div className="w-full rounded-lg border border-gray-200 bg-white">
-      <div className="flex border-b border-gray-200">
+    <div className="w-full rounded-lg border border-border bg-card">
+      <div className="flex border-b border-border">
         {['File', 'Edit', 'View', 'Help'].map((menu) => (
           <div key={menu} className="relative">
             <button
               onClick={() => setOpenMenu(openMenu === menu ? null : menu)}
-              className="flex items-center gap-1 px-4 py-3 text-sm font-medium hover:bg-gray-50"
+              className="flex items-center gap-1 px-4 py-3 text-sm font-medium hover:bg-muted/30"
             >
               {menu}
               <ChevronDown className="h-3 w-3 opacity-50" />
             </button>
             {openMenu === menu && (
-              <div className="absolute left-0 top-full min-w-48 border border-gray-200 bg-white shadow-lg">
+              <div className="absolute left-0 top-full min-w-48 border border-border bg-card shadow-lg">
                 {menu === 'File' && (
                   <>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       New
                     </button>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       Open
                     </button>
                     <Separator />
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       Exit
                     </button>
                   </>
                 )}
                 {menu === 'Edit' && (
                   <>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       Undo
                     </button>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       Redo
                     </button>
                   </>
                 )}
                 {menu === 'View' && (
                   <>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       Zoom In
                     </button>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       Zoom Out
                     </button>
                   </>
                 )}
                 {menu === 'Help' && (
                   <>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       Documentation
                     </button>
-                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-50">
+                    <button className="block w-full px-4 py-2 text-left text-sm hover:bg-muted/30">
                       About
                     </button>
                   </>
@@ -710,7 +710,7 @@ const MenubarPreview = () => {
           </div>
         ))}
       </div>
-      <div className="p-4 text-sm text-gray-600">Click a menu to see options</div>
+      <div className="p-4 text-sm text-muted-foreground">Click a menu to see options</div>
     </div>
   )
 }
@@ -735,13 +735,13 @@ const NavigationMenuPreview = () => {
   }
 
   return (
-    <nav className="rounded-lg border border-gray-200 bg-white">
+    <nav className="rounded-lg border border-border bg-card">
       <div className="flex">
         {Object.entries(menu).map(([name, items]) => (
           <div key={name} className="relative">
             <button
               onClick={() => setExpanded(expanded === name ? null : name)}
-              className="flex items-center gap-2 border-r border-gray-100 px-6 py-4 text-sm font-medium hover:bg-gray-50"
+              className="flex items-center gap-2 border-r border-border px-6 py-4 text-sm font-medium hover:bg-muted/30"
             >
               {name}
               <ChevronDown
@@ -751,16 +751,16 @@ const NavigationMenuPreview = () => {
               />
             </button>
             {expanded === name && (
-              <div className="absolute top-full left-0 min-w-56 border border-t-0 border-gray-200 bg-white shadow-lg">
+              <div className="absolute top-full left-0 min-w-56 border border-t-0 border-border bg-card shadow-lg">
                 <div className="p-4 space-y-3">
                   {items.map((item) => (
                     <a
                       key={item.label}
                       href="#"
-                      className="block rounded-lg p-3 hover:bg-gray-50"
+                      className="block rounded-lg p-3 hover:bg-muted/30"
                     >
                       <div className="font-medium text-sm">{item.label}</div>
-                      <div className="text-xs text-gray-600">{item.desc}</div>
+                      <div className="text-xs text-muted-foreground">{item.desc}</div>
                     </a>
                   ))}
                 </div>
@@ -786,7 +786,7 @@ const PaginationPreview = () => {
   }
 
   return (
-    <div className="flex items-center justify-center gap-2 rounded-lg bg-white p-6">
+    <div className="flex items-center justify-center gap-2 rounded-lg bg-card p-6">
       <Button
         onClick={() => setCurrent(Math.max(1, current - 1))}
         disabled={current === 1}
@@ -800,11 +800,11 @@ const PaginationPreview = () => {
         <>
           <button
             onClick={() => setCurrent(1)}
-            className="h-8 w-8 rounded border border-gray-200 hover:bg-gray-50"
+            className="h-8 w-8 rounded border border-border hover:bg-muted/30"
           >
             1
           </button>
-          <span className="px-1 text-gray-400">...</span>
+          <span className="px-1 text-muted-foreground/60">...</span>
         </>
       )}
 
@@ -815,7 +815,7 @@ const PaginationPreview = () => {
           className={`h-8 w-8 rounded ${
             current === page
               ? 'bg-blue-600 text-white'
-              : 'border border-gray-200 hover:bg-gray-50'
+              : 'border border-border hover:bg-muted/30'
           }`}
         >
           {page}
@@ -824,10 +824,10 @@ const PaginationPreview = () => {
 
       {current < totalPages - 2 && (
         <>
-          <span className="px-1 text-gray-400">...</span>
+          <span className="px-1 text-muted-foreground/60">...</span>
           <button
             onClick={() => setCurrent(totalPages)}
-            className="h-8 w-8 rounded border border-gray-200 hover:bg-gray-50"
+            className="h-8 w-8 rounded border border-border hover:bg-muted/30"
           >
             {totalPages}
           </button>
@@ -877,21 +877,21 @@ const ResizablePreview = () => {
   return (
     <div
       id="resizable-container"
-      className="flex h-64 w-full overflow-hidden rounded-lg border border-gray-200 bg-white"
+      className="flex h-64 w-full overflow-hidden rounded-lg border border-border bg-card"
     >
       <div
         className="flex items-center justify-center bg-blue-50"
         style={{ width: `${width}%` }}
       >
         <div className="text-center">
-          <div className="text-sm font-medium text-gray-700">Panel 1</div>
-          <div className="text-xs text-gray-500">{width.toFixed(0)}%</div>
+          <div className="text-sm font-medium text-foreground/80">Panel 1</div>
+          <div className="text-xs text-muted-foreground">{width.toFixed(0)}%</div>
         </div>
       </div>
       <div
         onMouseDown={handleMouseDown}
-        className={`w-1 cursor-col-resize bg-gray-200 transition-colors ${
-          isDragging ? 'bg-blue-600' : 'hover:bg-gray-300'
+        className={`w-1 cursor-col-resize bg-muted transition-colors ${
+          isDragging ? 'bg-blue-600' : 'hover:bg-muted'
         }`}
       />
       <div
@@ -899,8 +899,8 @@ const ResizablePreview = () => {
         style={{ width: `${100 - width}%` }}
       >
         <div className="text-center">
-          <div className="text-sm font-medium text-gray-700">Panel 2</div>
-          <div className="text-xs text-gray-500">{(100 - width).toFixed(0)}%</div>
+          <div className="text-sm font-medium text-foreground/80">Panel 2</div>
+          <div className="text-xs text-muted-foreground">{(100 - width).toFixed(0)}%</div>
         </div>
       </div>
     </div>
@@ -921,18 +921,18 @@ const SidebarPreview = () => {
   ]
 
   return (
-    <div className="flex h-80 rounded-lg border border-gray-200 bg-white overflow-hidden">
+    <div className="flex h-80 rounded-lg border border-border bg-card overflow-hidden">
       {/* Sidebar */}
       <div
-        className={`border-r border-gray-200 bg-gray-50 transition-all duration-300 ${
+        className={`border-r border-border bg-muted/30 transition-all duration-300 ${
           isOpen ? 'w-64' : 'w-16'
         }`}
       >
-        <div className="flex items-center justify-between border-b border-gray-200 p-4">
+        <div className="flex items-center justify-between border-b border-border p-4">
           {isOpen && <span className="font-semibold">Menu</span>}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-1 hover:bg-gray-100 rounded"
+            className="p-1 hover:bg-muted rounded"
           >
             <Menu className="h-5 w-5" />
           </button>
@@ -944,7 +944,7 @@ const SidebarPreview = () => {
               className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${
                 active
                   ? 'bg-blue-100 text-blue-700'
-                  : 'text-gray-700 hover:bg-gray-100'
+                  : 'text-foreground/80 hover:bg-muted'
               }`}
             >
               <Icon className="h-5 w-5 flex-shrink-0" />
@@ -957,7 +957,7 @@ const SidebarPreview = () => {
       {/* Content */}
       <div className="flex-1 p-6 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-muted-foreground">
             {isOpen ? 'Click menu to collapse' : 'Click menu to expand'}
           </p>
         </div>
@@ -983,7 +983,7 @@ const ToastPreview = () => {
   }
 
   return (
-    <div className="rounded-lg bg-white p-6">
+    <div className="rounded-lg bg-card p-6">
       <div className="mb-6 flex flex-wrap gap-2">
         <Button onClick={() => showToast('Success!', 'success')} variant="outline">
           Success
@@ -1021,12 +1021,12 @@ const ToastPreview = () => {
 // ============================================================================
 const SpinnerPreview = () => {
   return (
-    <div className="rounded-lg bg-white p-8">
+    <div className="rounded-lg bg-card p-8">
       <div className="grid grid-cols-3 gap-8">
         {/* Spinning circle */}
         <div className="flex flex-col items-center gap-4">
-          <div className="h-10 w-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" />
-          <span className="text-xs text-gray-600">Default</span>
+          <div className="h-10 w-10 border-4 border-border border-t-blue-600 rounded-full animate-spin" />
+          <span className="text-xs text-muted-foreground">Default</span>
         </div>
 
         {/* Dot pulse */}
@@ -1043,7 +1043,7 @@ const SpinnerPreview = () => {
               />
             ))}
           </div>
-          <span className="text-xs text-gray-600">Pulse dots</span>
+          <span className="text-xs text-muted-foreground">Pulse dots</span>
         </div>
 
         {/* Bar spinner */}
@@ -1060,7 +1060,7 @@ const SpinnerPreview = () => {
               />
             ))}
           </div>
-          <span className="text-xs text-gray-600">Bar loader</span>
+          <span className="text-xs text-muted-foreground">Bar loader</span>
         </div>
       </div>
 
@@ -1102,7 +1102,7 @@ export function ButtonGroup() {
   const [selected, setSelected] = useState('week')
   
   return (
-    <div className="inline-flex rounded-lg border border-gray-200 bg-white p-1">
+    <div className="inline-flex rounded-lg border border-border bg-card p-1">
       {['Day', 'Week', 'Month'].map((btn) => (
         <button
           key={btn}
@@ -1110,7 +1110,7 @@ export function ButtonGroup() {
           className={\`px-4 py-2 text-sm font-medium transition-all \${
             selected === btn
               ? 'bg-blue-600 text-white'
-              : 'text-gray-700 hover:bg-gray-50'
+              : 'text-foreground/80 hover:bg-muted/30'
           }\`}
         >
           {btn}
@@ -1147,7 +1147,7 @@ export function ButtonGroup() {
         </ContentSection>
 
         <ContentSection id="button-group-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <p>
               Ensure proper keyboard navigation with Tab/Shift+Tab. Use ARIA roles
               and attributes:
@@ -1227,7 +1227,7 @@ return (
           key={i}
           onClick={() => setCurrent(i)}
           className={\`h-2 w-2 rounded-full \${
-            i === current ? 'bg-gray-800' : 'bg-gray-300'
+            i === current ? 'bg-foreground/90' : 'bg-muted'
           }\`}
         />
       ))}
@@ -1262,7 +1262,7 @@ return (
         </ContentSection>
 
         <ContentSection id="carousel-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Provide keyboard navigation (arrow keys)</li>
               <li>Add aria-live region for slide changes</li>
@@ -1323,7 +1323,7 @@ return (
           onMouseLeave={() => setHoveredIndex(null)}
         >
           {hoveredIndex === i && (
-            <div className="rounded bg-gray-800 px-2 py-1 text-xs text-white">
+            <div className="rounded bg-foreground/90 px-2 py-1 text-xs text-white">
               {item.value}
             </div>
           )}
@@ -1331,7 +1331,7 @@ return (
             className="w-full rounded-t bg-gradient-to-t from-blue-500 to-blue-400"
             style={{ height: \`\${(item.value / 100) * 100}%\` }}
           />
-          <span className="text-xs text-gray-600">{item.label}</span>
+          <span className="text-xs text-muted-foreground">{item.label}</span>
         </div>
       ))}
     </div>
@@ -1383,7 +1383,7 @@ return (
         </ContentSection>
 
         <ContentSection id="chart-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Provide data table alongside chart</li>
               <li>Use role="img" with alt text for charts</li>
@@ -1515,7 +1515,7 @@ return (
         </ContentSection>
 
         <ContentSection id="data-table-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use semantic table markup (thead, tbody, th, td)</li>
               <li>Add scope attribute to headers</li>
@@ -1578,7 +1578,7 @@ for (let i = 1; i <= getDaysInMonth(currentMonth); i++) {
 }
 
 return (
-  <div className="rounded-lg border border-gray-200 bg-white p-4">
+  <div className="rounded-lg border border-border bg-card p-4">
     <div className="flex items-center justify-between mb-4">
       <button onClick={() => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1))}>
         &lt;
@@ -1594,7 +1594,7 @@ return (
         <button
           key={i}
           onClick={() => day && setSelectedDate(new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day))}
-          className={day === null ? '' : selectedDate?.getDate() === day ? 'bg-blue-600 text-white' : 'hover:bg-gray-100'}
+          className={day === null ? '' : selectedDate?.getDate() === day ? 'bg-blue-600 text-white' : 'hover:bg-muted'}
         >
           {day}
         </button>
@@ -1630,7 +1630,7 @@ return (
         </ContentSection>
 
         <ContentSection id="date-picker-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Support arrow keys for date navigation</li>
               <li>Use role="dialog" for picker popover</li>
@@ -1675,7 +1675,7 @@ return (
           code={`const [isOpen, setIsOpen] = useState(false)
 
 return (
-  <div className="relative h-80 bg-gray-50">
+  <div className="relative h-80 bg-muted/30">
     <Button onClick={() => setIsOpen(true)}>Open Drawer</Button>
     
     {isOpen && (
@@ -1684,7 +1684,7 @@ return (
           className="absolute inset-0 bg-black/50"
           onClick={() => setIsOpen(false)}
         />
-        <div className="absolute bottom-0 left-0 right-0 rounded-t-lg bg-white">
+        <div className="absolute bottom-0 left-0 right-0 rounded-t-lg bg-card">
           <div className="border-b p-4 flex justify-between">
             <h2>Settings</h2>
             <button onClick={() => setIsOpen(false)}>Close</button>
@@ -1746,7 +1746,7 @@ return (
         </ContentSection>
 
         <ContentSection id="drawer-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use role="dialog" with aria-modal</li>
               <li>Trap focus inside drawer</li>
@@ -1790,12 +1790,12 @@ return (
           preview={<EmptyStatePreview />}
           code={`export function EmptyState() {
   return (
-    <div className="rounded-lg bg-white p-12 text-center">
-      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
-        <AlertCircle className="h-8 w-8 text-gray-400" />
+    <div className="rounded-lg bg-card p-12 text-center">
+      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
+        <AlertCircle className="h-8 w-8 text-muted-foreground/60" />
       </div>
       <h3 className="mb-1 text-lg font-semibold">No data available</h3>
-      <p className="mb-6 text-sm text-gray-600">
+      <p className="mb-6 text-sm text-muted-foreground">
         We couldn't find any items. Try adjusting your filters.
       </p>
       <Button>Create Item</Button>
@@ -1848,7 +1848,7 @@ return (
         </ContentSection>
 
         <ContentSection id="empty-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use descriptive headings</li>
               <li>Provide actionable suggestions</li>
@@ -1916,7 +1916,7 @@ return (
       {hasError && (
         <p className="mt-1 text-xs text-red-600">Please enter a valid email</p>
       )}
-      <p className="mt-1 text-xs text-gray-500">We'll never share your email.</p>
+      <p className="mt-1 text-xs text-muted-foreground">We'll never share your email.</p>
     </div>
   </div>
 )`}
@@ -1948,7 +1948,7 @@ return (
         </ContentSection>
 
         <ContentSection id="field-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Associate labels with inputs using htmlFor</li>
               <li>Use aria-describedby for helper/error text</li>
@@ -1997,8 +1997,8 @@ return (
   <div className="space-y-6 p-6">
     <div>
       <Label className="mb-2 block text-sm font-medium">Website URL</Label>
-      <div className="flex rounded-lg border border-gray-200">
-        <span className="flex items-center bg-gray-50 px-4 text-sm text-gray-600">
+      <div className="flex rounded-lg border border-border">
+        <span className="flex items-center bg-muted/30 px-4 text-sm text-muted-foreground">
           https://
         </span>
         <Input
@@ -2007,7 +2007,7 @@ return (
           placeholder="example.com"
           className="border-0"
         />
-        <span className="flex items-center bg-gray-50 px-4 text-sm text-gray-600">
+        <span className="flex items-center bg-muted/30 px-4 text-sm text-muted-foreground">
           .com
         </span>
       </div>
@@ -2015,8 +2015,8 @@ return (
     
     <div>
       <Label className="mb-2 block text-sm font-medium">Price</Label>
-      <div className="flex rounded-lg border border-gray-200">
-        <span className="flex items-center bg-gray-50 px-4 text-sm font-medium text-gray-600">
+      <div className="flex rounded-lg border border-border">
+        <span className="flex items-center bg-muted/30 px-4 text-sm font-medium text-muted-foreground">
           $
         </span>
         <Input
@@ -2026,7 +2026,7 @@ return (
           placeholder="0.00"
           className="border-0"
         />
-        <span className="flex items-center bg-gray-50 px-4 text-sm text-gray-600">
+        <span className="flex items-center bg-muted/30 px-4 text-sm text-muted-foreground">
           USD
         </span>
       </div>
@@ -2061,7 +2061,7 @@ return (
         </ContentSection>
 
         <ContentSection id="input-group-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use aria-label to describe addons</li>
               <li>Ensure addon text is read by screen readers</li>
@@ -2136,7 +2136,7 @@ return (
           value={digit}
           onChange={(e) => handleChange(i, e.target.value)}
           onKeyDown={(e) => handleKeyDown(i, e)}
-          className="h-12 w-12 rounded-lg border border-gray-200 text-center text-lg font-semibold focus:border-blue-600"
+          className="h-12 w-12 rounded-lg border border-border text-center text-lg font-semibold focus:border-blue-600"
         />
       ))}
     </div>
@@ -2170,7 +2170,7 @@ return (
         </ContentSection>
 
         <ContentSection id="input-otp-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use inputMode="numeric" for mobile keyboards</li>
               <li>Announce errors with aria-live</li>
@@ -2224,12 +2224,12 @@ return (
     <div className="grid grid-cols-2 gap-4">
       {shortcuts.map((shortcut, i) => (
         <div key={i} className="flex items-center justify-between">
-          <span className="text-sm text-gray-600">{shortcut.action}</span>
+          <span className="text-sm text-muted-foreground">{shortcut.action}</span>
           <div className="flex gap-1">
             {shortcut.keys.map((key, j) => (
               <React.Fragment key={j}>
-                {j > 0 && <span className="text-xs text-gray-400">+</span>}
-                <kbd className="rounded border border-gray-300 bg-gray-50 px-2 py-1 font-mono text-xs font-semibold text-gray-700">
+                {j > 0 && <span className="text-xs text-muted-foreground/60">+</span>}
+                <kbd className="rounded border border-border bg-muted/30 px-2 py-1 font-mono text-xs font-semibold text-foreground/80">
                   {key}
                 </kbd>
               </React.Fragment>
@@ -2268,7 +2268,7 @@ return (
         </ContentSection>
 
         <ContentSection id="keyboard-shortcuts-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use semantic kbd element</li>
               <li>Provide alternative mouse actions</li>
@@ -2313,19 +2313,19 @@ return (
           code={`const [openMenu, setOpenMenu] = useState<string | null>(null)
 
 return (
-  <div className="w-full border border-gray-200 bg-white">
-    <div className="flex border-b border-gray-200">
+  <div className="w-full border border-border bg-card">
+    <div className="flex border-b border-border">
       {['File', 'Edit', 'View', 'Help'].map((menu) => (
         <div key={menu} className="relative">
           <button
             onClick={() => setOpenMenu(openMenu === menu ? null : menu)}
-            className="flex items-center gap-1 px-4 py-3 text-sm font-medium hover:bg-gray-50"
+            className="flex items-center gap-1 px-4 py-3 text-sm font-medium hover:bg-muted/30"
           >
             {menu}
             <ChevronDown className="h-3 w-3 opacity-50" />
           </button>
           {openMenu === menu && (
-            <div className="absolute left-0 top-full min-w-48 border border-gray-200 bg-white shadow-lg">
+            <div className="absolute left-0 top-full min-w-48 border border-border bg-card shadow-lg">
               {/* Menu items */}
             </div>
           )}
@@ -2362,7 +2362,7 @@ return (
         </ContentSection>
 
         <ContentSection id="menubar-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use role="menubar" and role="menu"</li>
               <li>Support arrow keys for navigation</li>
@@ -2418,24 +2418,24 @@ const menu = {
 }
 
 return (
-  <nav className="border border-gray-200 bg-white">
+  <nav className="border border-border bg-card">
     <div className="flex">
       {Object.entries(menu).map(([name, items]) => (
         <div key={name} className="relative">
           <button
             onClick={() => setExpanded(expanded === name ? null : name)}
-            className="flex items-center gap-2 border-r border-gray-100 px-6 py-4 text-sm font-medium hover:bg-gray-50"
+            className="flex items-center gap-2 border-r border-border px-6 py-4 text-sm font-medium hover:bg-muted/30"
           >
             {name}
             <ChevronDown className={expanded === name ? 'rotate-180' : ''} />
           </button>
           {expanded === name && (
-            <div className="absolute top-full left-0 min-w-56 border border-gray-200 bg-white shadow-lg">
+            <div className="absolute top-full left-0 min-w-56 border border-border bg-card shadow-lg">
               <div className="p-4 space-y-3">
                 {items.map((item) => (
-                  <a key={item.label} href="#" className="block rounded-lg p-3 hover:bg-gray-50">
+                  <a key={item.label} href="#" className="block rounded-lg p-3 hover:bg-muted/30">
                     <div className="font-medium text-sm">{item.label}</div>
-                    <div className="text-xs text-gray-600">{item.desc}</div>
+                    <div className="text-xs text-muted-foreground">{item.desc}</div>
                   </a>
                 ))}
               </div>
@@ -2488,7 +2488,7 @@ return (
         </ContentSection>
 
         <ContentSection id="navigation-menu-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use semantic nav element</li>
               <li>Support keyboard navigation (arrows, Enter)</li>
@@ -2551,10 +2551,10 @@ return (
 
     {current > 3 && (
       <>
-        <button onClick={() => setCurrent(1)} className="h-8 w-8 rounded border border-gray-200">
+        <button onClick={() => setCurrent(1)} className="h-8 w-8 rounded border border-border">
           1
         </button>
-        <span className="px-1 text-gray-400">...</span>
+        <span className="px-1 text-muted-foreground/60">...</span>
       </>
     )}
 
@@ -2562,7 +2562,7 @@ return (
       <button
         key={page}
         onClick={() => setCurrent(page)}
-        className={current === page ? 'h-8 w-8 bg-blue-600 text-white rounded' : 'h-8 w-8 rounded border border-gray-200'}
+        className={current === page ? 'h-8 w-8 bg-blue-600 text-white rounded' : 'h-8 w-8 rounded border border-border'}
       >
         {page}
       </button>
@@ -2570,8 +2570,8 @@ return (
 
     {current < totalPages - 2 && (
       <>
-        <span className="px-1 text-gray-400">...</span>
-        <button onClick={() => setCurrent(totalPages)} className="h-8 w-8 rounded border border-gray-200">
+        <span className="px-1 text-muted-foreground/60">...</span>
+        <button onClick={() => setCurrent(totalPages)} className="h-8 w-8 rounded border border-border">
           {totalPages}
         </button>
       </>
@@ -2628,7 +2628,7 @@ return (
         </ContentSection>
 
         <ContentSection id="pagination-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use aria-label for pagination container</li>
               <li>Mark current page with aria-current</li>
@@ -2695,13 +2695,13 @@ useEffect(() => {
 }, [isDragging])
 
 return (
-  <div id="resizable-container" className="flex h-64 overflow-hidden rounded-lg border border-gray-200 bg-white">
+  <div id="resizable-container" className="flex h-64 overflow-hidden rounded-lg border border-border bg-card">
     <div className="flex items-center justify-center bg-blue-50" style={{ width: \`\${width}%\` }}>
       Panel 1 - {width.toFixed(0)}%
     </div>
     <div
       onMouseDown={handleMouseDown}
-      className="w-1 cursor-col-resize bg-gray-200 hover:bg-gray-300"
+      className="w-1 cursor-col-resize bg-muted hover:bg-muted"
     />
     <div className="flex items-center justify-center bg-green-50" style={{ width: \`\${100 - width}%\` }}>
       Panel 2 - {(100 - width).toFixed(0)}%
@@ -2736,7 +2736,7 @@ return (
         </ContentSection>
 
         <ContentSection id="resizable-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use role="separator" for divider</li>
               <li>Support arrow keys for keyboard resize</li>
@@ -2788,17 +2788,17 @@ const menuItems = [
 ]
 
 return (
-  <div className="flex h-80 overflow-hidden rounded-lg border border-gray-200 bg-white">
-    <div className="border-r border-gray-200 bg-gray-50 transition-all duration-300" style={{ width: isOpen ? '256px' : '64px' }}>
-      <div className="flex items-center justify-between border-b border-gray-200 p-4">
+  <div className="flex h-80 overflow-hidden rounded-lg border border-border bg-card">
+    <div className="border-r border-border bg-muted/30 transition-all duration-300" style={{ width: isOpen ? '256px' : '64px' }}>
+      <div className="flex items-center justify-between border-b border-border p-4">
         {isOpen && <span className="font-semibold">Menu</span>}
-        <button onClick={() => setIsOpen(!isOpen)} className="p-1 hover:bg-gray-100 rounded">
+        <button onClick={() => setIsOpen(!isOpen)} className="p-1 hover:bg-muted rounded">
           <Menu className="h-5 w-5" />
         </button>
       </div>
       <nav className="p-4 space-y-2">
         {menuItems.map(({ icon: Icon, label, active }) => (
-          <button key={label} className={active ? 'w-full flex items-center gap-3 px-4 py-2 rounded-lg bg-blue-100 text-blue-700' : 'w-full flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100'}>
+          <button key={label} className={active ? 'w-full flex items-center gap-3 px-4 py-2 rounded-lg bg-blue-100 text-blue-700' : 'w-full flex items-center gap-3 px-4 py-2 rounded-lg text-foreground/80 hover:bg-muted'}>
             <Icon className="h-5 w-5 flex-shrink-0" />
             {isOpen && <span className="text-sm">{label}</span>}
           </button>
@@ -2806,7 +2806,7 @@ return (
       </nav>
     </div>
     <div className="flex-1 p-6 flex items-center justify-center">
-      <p className="text-sm text-gray-600">{isOpen ? 'Click menu to collapse' : 'Click menu to expand'}</p>
+      <p className="text-sm text-muted-foreground">{isOpen ? 'Click menu to collapse' : 'Click menu to expand'}</p>
     </div>
   </div>
 )`}
@@ -2856,7 +2856,7 @@ return (
         </ContentSection>
 
         <ContentSection id="sidebar-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use semantic nav element</li>
               <li>Use aria-expanded for collapse button</li>
@@ -2967,7 +2967,7 @@ return (
         </ContentSection>
 
         <ContentSection id="sonner-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use role="status" or role="alert"</li>
               <li>Use aria-live="polite" for updates</li>
@@ -3011,12 +3011,12 @@ return (
           preview={<SpinnerPreview />}
           code={`export function Spinner() {
   return (
-    <div className="rounded-lg bg-white p-8">
+    <div className="rounded-lg bg-card p-8">
       <div className="grid grid-cols-3 gap-8">
         {/* Default spinner */}
         <div className="flex flex-col items-center gap-4">
-          <div className="h-10 w-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" />
-          <span className="text-xs text-gray-600">Default</span>
+          <div className="h-10 w-10 border-4 border-border border-t-blue-600 rounded-full animate-spin" />
+          <span className="text-xs text-muted-foreground">Default</span>
         </div>
 
         {/* Pulse dots */}
@@ -3032,7 +3032,7 @@ return (
               />
             ))}
           </div>
-          <span className="text-xs text-gray-600">Pulse dots</span>
+          <span className="text-xs text-muted-foreground">Pulse dots</span>
         </div>
 
         {/* Bar spinner */}
@@ -3049,7 +3049,7 @@ return (
               />
             ))}
           </div>
-          <span className="text-xs text-gray-600">Bar loader</span>
+          <span className="text-xs text-muted-foreground">Bar loader</span>
         </div>
       </div>
     </div>
@@ -3101,7 +3101,7 @@ return (
         </ContentSection>
 
         <ContentSection id="spinner-accessibility" title="Accessibility">
-          <div className="space-y-3 text-sm text-gray-700">
+          <div className="space-y-3 text-sm text-foreground/80">
             <ul className="list-inside list-disc space-y-2">
               <li>Use aria-busy="true" on loading element</li>
               <li>Announce loading state with aria-live</li>

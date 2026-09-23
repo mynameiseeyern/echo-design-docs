@@ -935,7 +935,7 @@ toast.error('Failed to save', {
 
 &lt;!-- Custom toast --&gt;
 toast.custom((t) =&gt; (
-  &lt;div className="bg-white p-4 rounded-lg"&gt;
+  &lt;div className="bg-card p-4 rounded-lg"&gt;
     Custom content
   &lt;/div&gt;
 ))

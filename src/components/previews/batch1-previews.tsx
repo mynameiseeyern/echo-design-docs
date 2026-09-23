@@ -468,7 +468,7 @@ export function ContextMenuPreview() {
       {menuPosition && (
         <div
           ref={menuRef}
-          className="absolute bg-white border border-border rounded-md shadow-lg z-50"
+          className="absolute bg-popover border border-border rounded-md shadow-lg z-50"
           style={{
             left: `${menuPosition.x}px`,
             top: `${menuPosition.y}px`
